@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Portrait from "../images/Portrait.jpg"
 
 const HamburgerMenu = () => {
-  const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState(true)
 
   const toggleMenu = () => {
     if (!showMenu) {
@@ -98,7 +98,7 @@ const Nav = styled.nav`
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.95;
   visibility: hidden;
 
   &.show {
@@ -148,6 +148,17 @@ const Nav = styled.nav`
       background-position: center;
       border-radius: 50%;
       border: 0.2rem solid #0e34a0;
+      z-index: 4;
+    }
+  }
+
+  .nav-item {
+    transform: translate3d(37rem, 0, 0);
+    transition: 0.5s ease;
+    transition-delay: 0.1s;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
     }
   }
 

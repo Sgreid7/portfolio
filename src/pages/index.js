@@ -1,11 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCoffee } from "@fortawesome/free-solid-svg-icons"
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faTwitterSquare } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
 import Tampa from "../images/tampa.jpg"
-// import { faLinkedin } from "@fortawesome/free-solid-svg-icons"
 
 import HamburgerMenu from "../components/hamburgerMenu"
 import Layout from "../components/layout"
@@ -23,13 +23,10 @@ const IndexPage = () => (
       <h2>Web developer, Programmer, Lifelong Learner, Hockey Enthusiast</h2>
       <div className="icons">
         <a href="https://www.linkedin.com/in/samgreider/">
-          <FontAwesomeIcon icon={faCoffee} size="lg" />
+          <FontAwesomeIcon icon={faLinkedin} size="lg" />
         </a>
         <a href="https://github.com/Sgreid7">
-          <FontAwesomeIcon icon={faCoffee} size="lg" />
-        </a>
-        <a href="https://github.com/Sgreid7">
-          <i className="devicon-github-plain"></i>
+          <FontAwesomeIcon icon={faGithub} size="lg" />
         </a>
       </div>
     </HomeWrapper>
