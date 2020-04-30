@@ -29,7 +29,7 @@ const IndexPage = () => (
           <FontAwesomeIcon icon={faCoffee} size="lg" />
         </a>
         <a href="https://github.com/Sgreid7">
-          <FontAwesomeIcon icon={faTwitterSquare} size="lg" />
+          <i className="devicon-github-plain"></i>
         </a>
       </div>
     </HomeWrapper>
@@ -56,7 +56,7 @@ const HomeWrapper = styled.header`
 
   span {
     color: #0e34a0;
-    text-shadow: 0.15rem 0.15rem 0.15rem #fff;
+    text-shadow: 0.1rem 0.1rem 0.1rem #fff;
   }
 
   h1,
@@ -68,7 +68,7 @@ const HomeWrapper = styled.header`
   h1 {
     font-size: 6rem;
     margin-top: 20vh;
-    text-shadow: 0.15rem 0.15rem 0.15rem #0e34a0;
+    text-shadow: 0.1rem 0.1rem 0.1rem #0e34a0;
   }
 
   h2 {
@@ -84,6 +84,7 @@ const HomeWrapper = styled.header`
       padding: 0.4rem;
       transition: 0.5s ease;
       color: #fff;
+      height: 3rem;
 
       &:hover {
         color: red;
