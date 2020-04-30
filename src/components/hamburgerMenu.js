@@ -30,7 +30,7 @@ const HamburgerMenu = () => {
             <div className="portrait"></div>
           </div>
           <ul className={`menu-nav ${!showMenu ? "show" : "close"}`}>
-            <li className={`nav-item ${!showMenu ? "show" : "close"}`}>
+            <li className={`nav-item ${!showMenu ? "show" : "close"} current`}>
               <Link className="nav-link">Home</Link>
             </li>
             <li className={`nav-item ${!showMenu ? "show" : "close"}`}>
@@ -155,10 +155,58 @@ const Nav = styled.nav`
   .nav-item {
     transform: translate3d(37rem, 0, 0);
     transition: 0.5s ease;
-    transition-delay: 0.1s;
+
+    &:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+
+    &:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      transition-delay: 0.3s;
+    }
+
+    &:nth-child(4) {
+      transition-delay: 0.4s;
+    }
 
     &.show {
       transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: #000;
+      text-shadow: 0.05rem 0.05rem 0.05rem #dfdfdf;
+    }
+
+    .nav-link {
+      display: inline-block;
+      position: relative;
+      font-size: 2rem;
+      padding: 1rem 0;
+      font-weight: 300;
+      transition: 0.5s ease;
+      text-shadow: 0.1rem 0.1rem 0.1rem #2f3061;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0.15rem;
+        background: #0e34a0;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease-in;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
     }
   }
 
