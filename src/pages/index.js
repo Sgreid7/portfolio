@@ -7,6 +7,7 @@ import { faTwitterSquare } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
 import Tampa from "../images/tampa.jpg"
 
+import devices from "../utils/devices"
 import HamburgerMenu from "../components/hamburgerMenu"
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -36,8 +37,10 @@ const IndexPage = () => (
 export default IndexPage
 
 const HomeWrapper = styled.header`
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
-  line-height: 1.5;
+  line-height: 1;
   margin: 0;
   height: 100vh;
   color: #fff;
@@ -50,6 +53,13 @@ const HomeWrapper = styled.header`
   padding: 4rem;
   height: 100vh;
   overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  h1 {
+    font-size: 4rem;
+  }
 
   span {
     color: #2f3061;
@@ -62,14 +72,9 @@ const HomeWrapper = styled.header`
     font-weight: 400;
   }
 
-  h1 {
-    font-size: 6rem;
-    margin-top: 20vh;
-    text-shadow: 0.1rem 0.1rem 0.1rem #0e34a0;
-  }
-
   h2 {
-    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     padding: 0.2rem 1rem;
     background: rgba(52, 52, 52, 0.3);
   }
@@ -81,7 +86,6 @@ const HomeWrapper = styled.header`
       padding: 0.4rem;
       transition: 0.5s ease;
       color: #fff;
-      height: 3rem;
 
       &:hover {
         color: red;
@@ -98,5 +102,29 @@ const HomeWrapper = styled.header`
     height: 100vh;
     z-index: -5;
     background: rgba(52, 52, 52, 0.9);
+  }
+
+  @media (${devices.tablet}) {
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (${devices.laptop}) {
+    h1 {
+      font-size: 6rem;
+      margin-top: 15vh;
+      text-shadow: 0.1rem 0.1rem 0.1rem #0e34a0;
+      line-height: 1.5;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      padding: 0.2rem 1rem;
+      background: rgba(52, 52, 52, 0.3);
+    }
+  }
+
+  @media (${devices.laptopL}) {
   }
 `

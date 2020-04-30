@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import devices from "../utils/devices"
 import Portrait from "../images/Portrait.jpg"
 
 const HamburgerMenu = () => {
@@ -92,6 +93,15 @@ const MenuButton = styled.div`
     background: #fff;
     transition: 0.5s ease;
   }
+
+  @media (${devices.tablet}) {
+  }
+
+  @media (${devices.laptop}) {
+  }
+
+  @media (${devices.laptopL}) {
+  }
 `
 
 const Nav = styled.nav`
@@ -107,22 +117,31 @@ const Nav = styled.nav`
 
   .menu-branding,
   .menu-nav {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     float: left;
     width: 50%;
-    height: 100vh;
+    height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+    float: none;
+    width: 100%;
+    min-height: 0;
   }
 
   .menu-nav {
+    height: 75vh;
     margin: 0;
     padding: 0;
     background: rgb(60, 60, 60);
     list-style: none;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(-100%, 0, 0);
     transition: 0.5s ease;
 
     &.show {
@@ -133,16 +152,17 @@ const Nav = styled.nav`
 
   .menu-branding {
     background: rgb(47, 48, 97);
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(100%, 0, 0);
     transition: 0.5s ease;
+    height: 25vh;
 
     &.show {
       transform: translate3d(0, 0, 0);
     }
 
     .portrait {
-      width: 15rem;
-      height: 15rem;
+      width: 8rem;
+      height: 8rem;
       background: url(${Portrait});
       background-size: cover;
       background-position: center;
@@ -184,7 +204,7 @@ const Nav = styled.nav`
     .nav-link {
       display: inline-block;
       position: relative;
-      font-size: 2rem;
+      font-size: 1.5rem;
       padding: 1rem 0;
       font-weight: 300;
       transition: 0.5s ease;
@@ -213,5 +233,60 @@ const Nav = styled.nav`
   & a {
     color: #fff;
     text-decoration: none;
+  }
+
+  @media (${devices.tablet}) {
+  }
+
+  @media (${devices.laptop}) {
+    .menu-branding,
+    .menu-nav {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      width: 50%;
+      height: 100vh;
+    }
+
+    .menu-nav {
+      margin: 0;
+      padding: 0;
+      background: rgb(60, 60, 60);
+      list-style: none;
+      transform: translate3d(0, -100%, 0);
+      transition: 0.5s ease;
+
+      &.show {
+        /* slide in from the top */
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .menu-branding {
+      background: rgb(47, 48, 97);
+      transform: translate3d(0, 100%, 0);
+      transition: 0.5s ease;
+
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
+
+      .portrait {
+        width: 15rem;
+        height: 15rem;
+        background: url(${Portrait});
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        border: 0.2rem solid #0e34a0;
+        z-index: 4;
+      }
+    }
+  }
+
+  @media (${devices.laptopL}) {
   }
 `
