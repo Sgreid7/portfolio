@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import Portrait from "../images/Portrait.jpg"
 
 const HamburgerMenu = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -94,12 +95,64 @@ const MenuButton = styled.div`
 `
 
 const Nav = styled.nav`
-  a {
-    color: #fff;
-    text-decoration: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
   }
 
-  ul {
+  .menu-branding,
+  .menu-nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+  }
+
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: rgb(60, 60, 60);
     list-style: none;
+    transform: translate3d(0, -100%, 0);
+    transition: 0.5s ease;
+
+    &.show {
+      /* slide in from the top */
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menu-branding {
+    background: rgb(47, 48, 97);
+    transform: translate3d(0, 100%, 0);
+    transition: 0.5s ease;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .portrait {
+      width: 15rem;
+      height: 15rem;
+      background: url(${Portrait});
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      border: 0.2rem solid #0e34a0;
+    }
+  }
+
+  & a {
+    color: #fff;
+    text-decoration: none;
   }
 `

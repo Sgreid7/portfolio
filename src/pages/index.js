@@ -55,7 +55,7 @@ const HomeWrapper = styled.header`
   overflow: hidden;
 
   span {
-    color: #0e34a0;
+    color: #2f3061;
     text-shadow: 0.1rem 0.1rem 0.1rem #fff;
   }
 
