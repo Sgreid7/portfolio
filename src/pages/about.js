@@ -57,11 +57,18 @@ const AboutWrapper = styled.section`
   align-items: center;
 
   header {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     text-shadow: 0.1rem 0.1rem 0.1rem #0e34a0;
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
+    }
 
     h2 {
       font-style: italic;
+      padding-bottom: 0.3rem;
+      border-bottom: 0.2rem solid #0e34a0;
     }
   }
 
@@ -100,6 +107,10 @@ const AboutWrapper = styled.section`
       padding: 1rem;
       border: 0.2rem solid #0e34a0;
       border-radius: 0.2rem;
+      background: rgb(70, 70, 70);
+      -moz-box-shadow: inset 0 0 10px #000000;
+      -webkit-box-shadow: inset 0 0 10px #000000;
+      box-shadow: inset 0 0 10px #000000;
     }
   }
 
@@ -135,6 +146,8 @@ const AboutWrapper = styled.section`
     height: 100vh;
 
     header {
+      margin-top: 1rem;
+
       h1 {
         font-size: 4rem;
         text-shadow: 0.15rem 0.15rem 0.15rem #0e34a0;
