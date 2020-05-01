@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faTwitterSquare } from "@fortawesome/free-solid-svg-icons"
+import { faTwitterSquare } from "@fortawesome/free-brands-svg-icons"
 import styled from "styled-components"
 import Tampa from "../images/tampa.jpg"
 
@@ -24,10 +24,13 @@ const IndexPage = () => (
       <h2>Web developer, Programmer, Lifelong Learner, Hockey Enthusiast</h2>
       <div className="icons">
         <a href="https://www.linkedin.com/in/samgreider/">
-          <FontAwesomeIcon icon={faLinkedin} size="lg" />
+          <FontAwesomeIcon icon={faLinkedin} size="2x" />
         </a>
         <a href="https://github.com/Sgreid7">
-          <FontAwesomeIcon icon={faGithub} size="lg" />
+          <FontAwesomeIcon icon={faGithub} size="2x" />
+        </a>
+        <a href="https://twitter.com/SamGreider">
+          <FontAwesomeIcon icon={faTwitterSquare} size="2x" />
         </a>
       </div>
     </HomeWrapper>
@@ -73,6 +76,7 @@ const HomeWrapper = styled.header`
   }
 
   h2 {
+    font-style: italic;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     padding: 0.2rem 1rem;
@@ -113,7 +117,7 @@ const HomeWrapper = styled.header`
   @media (${devices.laptop}) {
     h1 {
       font-size: 6rem;
-      margin-top: 15vh;
+      margin-top: 10vh;
       text-shadow: 0.1rem 0.1rem 0.1rem #0e34a0;
       line-height: 1.5;
     }
@@ -126,5 +130,8 @@ const HomeWrapper = styled.header`
   }
 
   @media (${devices.laptopL}) {
+    h1 {
+      font-size: 8rem;
+    }
   }
 `

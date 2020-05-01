@@ -35,13 +35,19 @@ const HamburgerMenu = () => {
               <Link className="nav-link">Home</Link>
             </li>
             <li className={`nav-item ${!showMenu ? "show" : "close"}`}>
-              <Link className="nav-link">About Me</Link>
+              <Link className="nav-link" to="/about">
+                About Me
+              </Link>
             </li>
             <li className={`nav-item ${!showMenu ? "show" : "close"}`}>
-              <Link className="nav-link">My Work</Link>
+              <Link className="nav-link" to="/work">
+                My Work
+              </Link>
             </li>
             <li className={`nav-item ${!showMenu ? "show" : "close"}`}>
-              <Link className="nav-link">Contact Me</Link>
+              <Link className="nav-link" to="/contact">
+                Contact Me
+              </Link>
             </li>
           </ul>
         </Nav>
@@ -93,15 +99,6 @@ const MenuButton = styled.div`
     background: #fff;
     transition: 0.5s ease;
   }
-
-  @media (${devices.tablet}) {
-  }
-
-  @media (${devices.laptop}) {
-  }
-
-  @media (${devices.laptopL}) {
-  }
 `
 
 const Nav = styled.nav`
@@ -131,7 +128,7 @@ const Nav = styled.nav`
     height: 75vh;
     margin: 0;
     padding: 0;
-    background: rgb(60, 60, 60);
+    background: rgb(52, 52, 52);
     list-style: none;
     transform: translate3d(100%, 0, 0);
     transition: 0.5s ease;
