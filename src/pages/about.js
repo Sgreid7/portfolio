@@ -39,7 +39,7 @@ const About = () => {
         </div>
 
         <footer>
-          &copy; 2020 Made by <Link to="/">Sam Greider</Link>
+          Made by <Link to="/">Sam Greider</Link> &copy; 2020
         </footer>
       </AboutWrapper>
     </>
@@ -101,6 +101,7 @@ const AboutWrapper = styled.section`
 
     h3 {
       text-shadow: 0.1rem 0.1rem 0.1rem #0e34a0;
+      letter-spacing: 0.1rem;
     }
 
     p {
