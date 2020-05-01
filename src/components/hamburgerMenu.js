@@ -117,14 +117,6 @@ const Nav = styled.nav`
 
   .menu-branding,
   .menu-nav {
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    float: left;
-    width: 50%;
-    height: 100vh; */
     display: flex;
     flex-direction: column;
     /* flex-wrap: wrap; */
@@ -141,7 +133,7 @@ const Nav = styled.nav`
     padding: 0;
     background: rgb(60, 60, 60);
     list-style: none;
-    transform: translate3d(-100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
     transition: 0.5s ease;
 
     &.show {
@@ -152,7 +144,7 @@ const Nav = styled.nav`
 
   .menu-branding {
     background: rgb(47, 48, 97);
-    transform: translate3d(100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
     transition: 0.5s ease;
     height: 25vh;
 
