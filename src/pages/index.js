@@ -1,16 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faTwitterSquare } from "@fortawesome/free-brands-svg-icons"
+import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 import styled from "styled-components"
 import Tampa from "../images/tampa.jpg"
 
 import devices from "../utils/devices"
 import HamburgerMenu from "../components/hamburgerMenu"
-import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -24,13 +21,13 @@ const IndexPage = () => (
       <h2>Web developer, Programmer, Lifelong Learner, Hockey Enthusiast</h2>
       <div className="icons">
         <a href="https://www.linkedin.com/in/samgreider/">
-          <FontAwesomeIcon icon={faLinkedin} size="2x" />
+          <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
         </a>
         <a href="https://github.com/Sgreid7">
           <FontAwesomeIcon icon={faGithub} size="2x" />
         </a>
         <a href="https://twitter.com/SamGreider">
-          <FontAwesomeIcon icon={faTwitterSquare} size="2x" />
+          <FontAwesomeIcon icon={faTwitter} size="2x" />
         </a>
       </div>
     </HomeWrapper>
@@ -84,15 +81,45 @@ const HomeWrapper = styled.header`
   }
 
   .icons {
-    margin-top: 1rem;
+    margin-top: 10rem;
+    padding: 0;
+    position: absolute;
+    display: flex;
 
     a {
+      position: relative;
+      margin: 0 1rem;
       padding: 0.4rem;
       transition: 0.5s ease;
       color: #fff;
+      background: #2f3061;
+      border-radius: 50%;
+      text-align: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* width: 100%; */
+        /* height: 100%; */
+        border-radius: 50%;
+        background: #0e34a0;
+        transition: 0.5s ease;
+        transform: scale(0.9);
+        z-index: -1;
+      }
+
+      &:hover::before {
+        transform: scale(1.2);
+        box-shadow: 0 0 1rem #0e34a0;
+        filter: blur(3px);
+      }
 
       &:hover {
-        color: red;
+        color: #dfdfdf;
+        box-shadow: 0 0 1rem #0e34a0;
+        text-shadow: 0 0 1rem #0e34a0;
       }
     }
   }
@@ -112,6 +139,10 @@ const HomeWrapper = styled.header`
     h2 {
       margin-bottom: 0;
     }
+
+    .icons {
+      margin-top: 6rem;
+    }
   }
 
   @media (${devices.laptop}) {
@@ -126,6 +157,10 @@ const HomeWrapper = styled.header`
       margin-bottom: 1rem;
       padding: 0.2rem 1rem;
       background: rgba(52, 52, 52, 0.3);
+    }
+
+    .icons {
+      margin-top: 9rem;
     }
   }
 

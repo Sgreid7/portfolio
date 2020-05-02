@@ -31,7 +31,7 @@ const HamburgerMenu = () => {
             <div className="portrait"></div>
           </div>
           <ul className={`menu-nav ${!showMenu ? "show" : "close"}`}>
-            <li className={`nav-item ${!showMenu ? "show" : "close"} current`}>
+            <li className={`nav-item ${!showMenu ? "show" : "close"}`}>
               <Link className="nav-link">Home</Link>
             </li>
             <li className={`nav-item ${!showMenu ? "show" : "close"}`}>
@@ -183,11 +183,6 @@ const Nav = styled.nav`
 
     &.show {
       transform: translate3d(0, 0, 0);
-    }
-
-    &.current > a {
-      color: #000;
-      text-shadow: 0.05rem 0.05rem 0.05rem #dfdfdf;
     }
 
     .nav-link {
