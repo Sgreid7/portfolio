@@ -89,10 +89,10 @@ const HomeWrapper = styled.header`
     a {
       position: relative;
       margin: 0 1rem;
-      padding: 0.4rem;
+      padding: 0.5rem;
       transition: 0.5s ease;
+      background: #000;
       color: #fff;
-      background: #2f3061;
       border-radius: 50%;
       text-align: center;
 
@@ -101,8 +101,8 @@ const HomeWrapper = styled.header`
         position: absolute;
         top: 0;
         left: 0;
-        /* width: 100%; */
-        /* height: 100%; */
+        width: 100%;
+        height: 100%;
         border-radius: 50%;
         background: #0e34a0;
         transition: 0.5s ease;
@@ -111,15 +111,14 @@ const HomeWrapper = styled.header`
       }
 
       &:hover::before {
-        transform: scale(1.2);
-        box-shadow: 0 0 1rem #0e34a0;
-        filter: blur(3px);
+        transform: scale(1.1);
+        box-shadow: 0 0 2rem #0e34a0;
       }
 
       &:hover {
-        color: #dfdfdf;
-        box-shadow: 0 0 1rem #0e34a0;
-        text-shadow: 0 0 1rem #0e34a0;
+        color: #0e34a0;
+        box-shadow: 0 0 0.5rem #0e34a0;
+        text-shadow: 0 0 0.5rem #0e34a0;
       }
     }
   }

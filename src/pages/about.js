@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import devices from "../utils/devices"
 import Portrait from "../images/Portrait.jpg"
 import SEO from "../components/seo"
+import Footer from "../components/footer"
 import HamburgerMenu from "../components/hamburgerMenu"
 import styled from "styled-components"
 
@@ -38,9 +39,7 @@ const About = () => {
           </div>
         </div>
 
-        <footer>
-          Made by <Link to="/">Sam Greider</Link> &copy; 2020
-        </footer>
+        <Footer />
       </AboutWrapper>
     </>
   )
@@ -57,7 +56,7 @@ const AboutWrapper = styled.section`
   align-items: center;
 
   header {
-    margin-top: 1.5rem;
+    /* margin-top: 1rem; */
     text-shadow: 0.1rem 0.1rem 0.1rem #0e34a0;
     text-align: center;
 
@@ -82,6 +81,7 @@ const AboutWrapper = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
   }
 
   .portrait {
@@ -112,19 +112,6 @@ const AboutWrapper = styled.section`
       -moz-box-shadow: inset 0 0 10px #000000;
       -webkit-box-shadow: inset 0 0 10px #000000;
       box-shadow: inset 0 0 10px #000000;
-    }
-  }
-
-  footer {
-    text-align: center;
-    background: #000;
-    border-top: 0.2rem solid #0e34a0;
-    padding: 0.5rem;
-    width: 100%;
-
-    a {
-      text-decoration: none;
-      color: #fff;
     }
   }
 

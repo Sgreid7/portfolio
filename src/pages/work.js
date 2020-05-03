@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import SEO from "../components/seo"
+import Footer from "../components/footer"
 import HamburgerMenu from "../components/hamburgerMenu"
 import devices from "../utils/devices"
 
@@ -18,9 +19,7 @@ const Work = () => {
         <div className="projects">
           <div className="item"></div>
         </div>
-        <footer>
-          Made by <Link to="/">Sam Greider</Link> &copy; 2020
-        </footer>
+        <Footer />
       </ContentWrapper>
     </>
   )
@@ -41,18 +40,5 @@ const ContentWrapper = styled.section`
   span {
     color: #0e34a0;
     text-shadow: 0.05rem 0.05rem 0.05rem #fff;
-  }
-
-  footer {
-    text-align: center;
-    background: #000;
-    border-top: 0.2rem solid #0e34a0;
-    padding: 0.5rem;
-    width: 100%;
-
-    a {
-      text-decoration: none;
-      color: #fff;
-    }
   }
 `
