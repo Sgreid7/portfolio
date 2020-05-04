@@ -54,6 +54,7 @@ const AboutWrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
 
   header {
     /* margin-top: 1rem; */
