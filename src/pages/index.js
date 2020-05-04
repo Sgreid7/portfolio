@@ -39,7 +39,6 @@ const HomeWrapper = styled.header`
   box-sizing: border-box;
   line-height: 1;
   margin: 0;
-  height: 100%;
   width: 100%;
   color: #fff;
   /* Photo by Kody Cheyne on Unsplash */
