@@ -27,8 +27,8 @@ const Container = styled.section`
 
   .backside {
     text-align: center;
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     transition: 0.5s ease;
     opacity: 0;
     position: absolute;

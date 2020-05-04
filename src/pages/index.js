@@ -2,7 +2,6 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 import styled from "styled-components"
 import Tampa from "../images/tampa.jpg"
 
@@ -25,9 +24,6 @@ const IndexPage = () => (
         </a>
         <a href="https://github.com/Sgreid7">
           <FontAwesomeIcon icon={faGithub} size="2x" />
-        </a>
-        <a href="https://twitter.com/SamGreider">
-          <FontAwesomeIcon icon={faTwitter} size="2x" />
         </a>
       </div>
     </HomeWrapper>
@@ -166,6 +162,10 @@ const HomeWrapper = styled.header`
   @media (${devices.laptopL}) {
     h1 {
       font-size: 8rem;
+    }
+
+    .icons {
+      margin-top: 15rem;
     }
   }
 `
