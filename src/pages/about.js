@@ -38,8 +38,6 @@ const About = () => {
             </p>
           </div>
         </div>
-
-        <Footer />
       </AboutWrapper>
     </>
   )
@@ -55,10 +53,9 @@ const AboutWrapper = styled.section`
   justify-content: center;
   align-items: center;
   min-height: 100%;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   header {
-    /* margin-top: 1rem; */
     text-shadow: 0.1rem 0.1rem 0.1rem #0e34a0;
     text-align: center;
 
@@ -83,7 +80,7 @@ const AboutWrapper = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
   }
 
   .portrait {
@@ -109,6 +106,7 @@ const AboutWrapper = styled.section`
     p {
       padding: 1rem;
       border: 0.2rem solid #0e34a0;
+      text-shadow: 0.08rem 0.08rem 0.08rem #0e34a0;
       border-radius: 0.2rem;
       background: rgb(70, 70, 70);
       -moz-box-shadow: inset 0 0 10px #000000;
@@ -130,6 +128,10 @@ const AboutWrapper = styled.section`
       height: 10rem;
       width: 10rem;
     }
+
+    .about-info {
+      margin-bottom: 5rem;
+    }
   }
 
   @media (${devices.laptop}) {
@@ -149,6 +151,7 @@ const AboutWrapper = styled.section`
       flex-direction: row;
       width: 100%;
       justify-content: space-evenly;
+      // margin-bottom: 10rem;
     }
 
     .portrait {
@@ -163,5 +166,26 @@ const AboutWrapper = styled.section`
     footer {
       margin-top: 2rem;
     }
+  }
+
+  @media (${devices.laptopL}) {
+    .bio {
+      width: 30vw;
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+        line-height: 1.8rem;
+      }
+    }
+
+    .portrait {
+      height: 20rem;
+      width: 20rem;
+    }    
   }
 `

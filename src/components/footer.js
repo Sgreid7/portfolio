@@ -19,6 +19,7 @@ const FooterSection = styled.footer`
   border-top: 0.2rem solid #0e34a0;
   padding: 0.5rem;
   width: 100%;
+  color: #fff;
 
   a {
     text-decoration: none;

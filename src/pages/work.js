@@ -80,16 +80,18 @@ const ContentWrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   header {
     text-align: center;
+    margin-top: 2rem;
   }
 
   .projects {
     display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 2rem;
     margin-bottom: 4rem;
   }
 
@@ -108,6 +110,34 @@ const ContentWrapper = styled.section`
     text-shadow: 0.05rem 0.05rem 0.05rem #fff;
   }
 
+  @media (${devices.tablet}) {
+    header {
+        h1 {
+          font-size: 3rem;
+        }
+    }
+    
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   @media (${devices.laptop}) {
+    .projects {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (${devices.laptopL}) {
+
+    header {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+
+    .projects {
+      margin-bottom: 12rem;
+    }
   }
 `
