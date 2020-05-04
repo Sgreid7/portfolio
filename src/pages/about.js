@@ -52,7 +52,7 @@ const AboutWrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100%;
+  min-height: 100vh;
   // overflow-x: hidden;
 
   header {
@@ -80,7 +80,7 @@ const AboutWrapper = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5rem;
+    padding-bottom: 3rem;
   }
 
   .portrait {
@@ -128,10 +128,6 @@ const AboutWrapper = styled.section`
       height: 10rem;
       width: 10rem;
     }
-
-    .about-info {
-      margin-bottom: 5rem;
-    }
   }
 
   @media (${devices.laptop}) {
@@ -151,7 +147,6 @@ const AboutWrapper = styled.section`
       flex-direction: row;
       width: 100%;
       justify-content: space-evenly;
-      // margin-bottom: 10rem;
     }
 
     .portrait {
@@ -161,10 +156,6 @@ const AboutWrapper = styled.section`
 
     .bio {
       width: 50vw;
-    }
-
-    footer {
-      margin-top: 2rem;
     }
   }
 
@@ -186,6 +177,6 @@ const AboutWrapper = styled.section`
     .portrait {
       height: 20rem;
       width: 20rem;
-    }    
+    }
   }
 `

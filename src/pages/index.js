@@ -28,7 +28,6 @@ const IndexPage = () => (
         </a>
       </div>
     </HomeWrapper>
-      <Footer />
   </>
 )
 
@@ -41,6 +40,7 @@ const HomeWrapper = styled.header`
   line-height: 1;
   margin: 0;
   height: 100%;
+  width: 100%;
   color: #fff;
   /* Photo by Kody Cheyne on Unsplash */
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
