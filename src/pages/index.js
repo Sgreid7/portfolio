@@ -13,8 +13,8 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <>
     <SEO title="Welcome to My Portfolio" />
-    <HamburgerMenu />
     <HomeWrapper>
+    <HamburgerMenu />
       <h1>
         Sam <span>Greider</span>
       </h1>

@@ -10,8 +10,8 @@ const About = () => {
   return (
     <>
       <SEO title="About Me" />
-      <HamburgerMenu />
       <AboutWrapper>
+      <HamburgerMenu />
         <header>
           <h1>
             About <span>Me</span>

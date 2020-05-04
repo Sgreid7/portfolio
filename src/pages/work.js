@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import SEO from "../components/seo"
 import Footer from "../components/footer"
@@ -16,8 +15,8 @@ const Work = () => {
   return (
     <>
       <SEO title="My Work" />
-      <HamburgerMenu />
       <ContentWrapper>
+      <HamburgerMenu />
         <header>
           <h1>
             My <span>Work</span>
@@ -26,7 +25,6 @@ const Work = () => {
         </header>
 
         <div className="projects">
-          {/* <div className="item"> */}
           <Project
             site="https://satellite-spacebook.netlify.app/"
             code="https://github.com/Sgreid7/SpaceBook"
@@ -61,7 +59,6 @@ const Work = () => {
             image={Movies}
             alt="1989 Movies Project"
           />
-          {/* </div> */}
         </div>
         <Footer />
       </ContentWrapper>
