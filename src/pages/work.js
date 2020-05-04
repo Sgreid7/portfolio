@@ -72,7 +72,7 @@ const Work = () => {
 export default Work
 
 const ContentWrapper = styled.section`
-  height: 100%;
+  min-height: 100%;
   background: rgb(52, 52, 52);
   color: #fff;
   text-shadow: 0.1rem 0.1rem 0.1rem #0e34a0;
@@ -80,6 +80,7 @@ const ContentWrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 
   header {
     text-align: center;

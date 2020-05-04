@@ -4,9 +4,9 @@ import devices from "../utils/devices"
 
 const Project = ({ site, code, image, alt }) => {
   return (
-    <Container>
+    <Card>
       <Image src={image} alt={alt} />
-      <div className="backside">
+      <div className="container">
         <a href={site}>
           <button>The Project</button>
         </a>
@@ -14,46 +14,29 @@ const Project = ({ site, code, image, alt }) => {
           <button>The Code</button>
         </a>
       </div>
-    </Container>
+    </Card>
   )
 }
 
 export default Project
 
-const Container = styled.section`
+const Card = styled.section`
   text-align: center;
-  position: relative;
   margin: 0;
+  background: #dfdfdf;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-  .backside {
+  .container {
     text-align: center;
     /* width: 100%;
     height: 100%; */
-    transition: 0.5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-  }
-
-  .backside:hover {
-    opacity: 1;
+    padding: 0.5rem 1rem;
   }
 `
 
 const Image = styled.img`
   margin: 0;
-  border: 0.2rem solid #0e34a0;
+  border: 0.1rem solid #0e34a0;
   width: 25vw;
   height: 10rem;
-  opacity: 1;
-  display: block;
-  transition: 0.5s ease;
-  backface-visibility: hidden;
-
-  :hover {
-    opacity: 0.3;
-  }
 `

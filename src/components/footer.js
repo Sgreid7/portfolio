@@ -13,9 +13,7 @@ const footer = () => {
 export default footer
 
 const FooterSection = styled.footer`
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  margin-top: auto;
   text-align: center;
   background: #000;
   border-top: 0.2rem solid #0e34a0;
