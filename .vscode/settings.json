@@ -3,5 +3,8 @@
     "fontawesome",
     "fortawesome",
     "react"
+  ],
+  "cSpell.ignoreWords": [
+    "tvguide"
   ]
 }

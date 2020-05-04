@@ -13,7 +13,7 @@ const footer = () => {
 export default footer
 
 const FooterSection = styled.footer`
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
   text-align: center;
