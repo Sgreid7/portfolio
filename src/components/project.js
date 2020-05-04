@@ -8,10 +8,10 @@ const Project = ({ site, code, image, alt }) => {
       <Image src={image} alt={alt} />
       <div className="container">
         <a href={site}>
-          <button>The Project</button>
+          <button>Project</button>
         </a>
         <a href={code}>
-          <button>The Code</button>
+          <button>Code</button>
         </a>
       </div>
     </Card>
@@ -47,7 +47,7 @@ const Card = styled.section`
       border: 0.05rem solid #fff;
       color: #fff;
       height: 2rem;
-      width: 8rem;
+      width: 5rem;
       transition: 0.3s ease;
 
       :hover {
@@ -55,6 +55,12 @@ const Card = styled.section`
         border: 0.05rem solid #0e34a0;
         transform: translateY(-0.2rem);
         box-shadow: 0 0.3rem 0.3rem #000;
+      }
+    }
+
+    @media (${devices.laptopL}) {
+      button {
+        width: 8rem;
       }
     }
   }
@@ -78,6 +84,5 @@ const Image = styled.img`
   height: 10rem;
 
   @media (${devices.tablet}) {
-
   }
 `
