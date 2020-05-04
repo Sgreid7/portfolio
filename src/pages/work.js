@@ -137,6 +137,7 @@ const ContentWrapper = styled.section`
     }
 
     .projects {
+      grid-template-columns: repeat(4, 1fr);
       margin-bottom: 12rem;
     }
   }

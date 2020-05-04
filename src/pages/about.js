@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import devices from "../utils/devices"
 import Portrait from "../images/Portrait.jpg"
 import SEO from "../components/seo"
-import Footer from "../components/footer"
 import HamburgerMenu from "../components/hamburgerMenu"
 import styled from "styled-components"
 
