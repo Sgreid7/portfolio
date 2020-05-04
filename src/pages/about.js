@@ -10,8 +10,8 @@ const About = () => {
   return (
     <>
       <SEO title="About Me" />
-      <AboutWrapper>
       <HamburgerMenu />
+      <AboutWrapper>
         <header>
           <h1>
             About <span>Me</span>
@@ -33,7 +33,8 @@ const About = () => {
               the key to achieving one's goals and delivering exceptional
               results. I enjoy a good challenge, and I'm not hesitant to start
               learning new technologies that I can start to implement in my
-              craft.
+              craft. I'm excited to join a company where I can continue to grow
+              as a developer, team member, and a person.
             </p>
           </div>
         </div>

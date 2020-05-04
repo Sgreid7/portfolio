@@ -5,7 +5,6 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import styled from "styled-components"
 import Tampa from "../images/tampa.jpg"
 
-import Footer from "../components/footer"
 import devices from "../utils/devices"
 import HamburgerMenu from "../components/hamburgerMenu"
 import SEO from "../components/seo"
@@ -13,8 +12,8 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <>
     <SEO title="Welcome to My Portfolio" />
-    <HomeWrapper>
     <HamburgerMenu />
+    <HomeWrapper>
       <h1>
         Sam <span>Greider</span>
       </h1>

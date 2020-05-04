@@ -7,8 +7,8 @@ const contact = () => {
   return (
     <>
       <SEO title="Contact Me" />
-      <ContactWrapper>
       <HamburgerMenu />
+      <ContactWrapper>
         <header>
           <h1>
             Contact <span>Me</span>
@@ -22,7 +22,7 @@ const contact = () => {
             </a>
           </div>
           <div className="phone">
-            <a href=""></a>
+            <a href="tel:+1-239-246-1640">(239) 246-1640</a>
           </div>
         </div>
       </ContactWrapper>

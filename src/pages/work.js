@@ -15,8 +15,8 @@ const Work = () => {
   return (
     <>
       <SEO title="My Work" />
-      <ContentWrapper>
       <HamburgerMenu />
+      <ContentWrapper>
         <header>
           <h1>
             My <span>Work</span>
@@ -109,11 +109,11 @@ const ContentWrapper = styled.section`
 
   @media (${devices.tablet}) {
     header {
-        h1 {
-          font-size: 3rem;
-        }
+      h1 {
+        font-size: 3rem;
+      }
     }
-    
+
     .projects {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -126,7 +126,6 @@ const ContentWrapper = styled.section`
   }
 
   @media (${devices.laptopL}) {
-
     header {
       h1 {
         font-size: 4rem;
