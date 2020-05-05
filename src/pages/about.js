@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import devices from "../utils/devices"
 import Portrait from "../images/Portrait.jpg"
 import SEO from "../components/seo"

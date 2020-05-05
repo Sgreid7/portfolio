@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import SEO from "../components/seo"
-import Footer from "../components/footer"
 import Project from "../components/project"
 import HamburgerMenu from "../components/hamburgerMenu"
 import devices from "../utils/devices"
@@ -60,7 +59,6 @@ const Work = () => {
             alt="1989 Movies Project"
           />
         </div>
-        <Footer />
       </ContentWrapper>
     </>
   )
@@ -125,7 +123,7 @@ const ContentWrapper = styled.section`
     }
   }
 
-  @media (${devices.laptopL}) {
+  @media (${devices.laptop}) {
     header {
       h1 {
         font-size: 4rem;
