@@ -51,12 +51,11 @@ const AboutWrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  // overflow-x: hidden;
 
   header {
     text-shadow: 0.1rem 0.1rem 0.1rem #0e34a0;
     text-align: center;
+    margin-top: 2rem;
 
     h1 {
       font-size: 2.5rem;
@@ -80,6 +79,7 @@ const AboutWrapper = styled.section`
     justify-content: center;
     align-items: center;
     padding-bottom: 3rem;
+    background: rgb(52, 52, 52);
   }
 
   .portrait {
@@ -103,7 +103,8 @@ const AboutWrapper = styled.section`
     }
 
     p {
-      padding: 1rem 0 2rem 0;
+      /* padding: 1rem 0 2rem 0; */
+      padding: 1rem;
       border: 0.2rem solid #0e34a0;
       text-shadow: 0.08rem 0.08rem 0.08rem #0e34a0;
       border-radius: 0.2rem;
@@ -117,7 +118,7 @@ const AboutWrapper = styled.section`
 
   @media (${devices.tablet}) {
     header {
-      margin-top: 1rem;
+      /* margin-top: 1rem; */
 
       h1 {
         font-size: 3rem;
@@ -131,11 +132,9 @@ const AboutWrapper = styled.section`
   }
 
   @media (${devices.laptop}) {
-    height: 100vh;
+    /* height: 100vh; */
 
     header {
-      margin-top: 1rem;
-
       h1 {
         font-size: 4rem;
         text-shadow: 0.15rem 0.15rem 0.15rem #0e34a0;
@@ -147,7 +146,7 @@ const AboutWrapper = styled.section`
       flex-direction: row;
       width: 100%;
       justify-content: space-evenly;
-      padding-bottom: 0;
+      padding-bottom: 2rem;
     }
 
     .portrait {
@@ -157,6 +156,10 @@ const AboutWrapper = styled.section`
 
     .bio {
       width: 50vw;
+
+      h3 {
+        font-size: 1.7rem;
+      }
     }
   }
 
