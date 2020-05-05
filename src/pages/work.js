@@ -1,7 +1,8 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 import styled from "styled-components"
 import SEO from "../components/seo"
-import Footer from "../components/footer"
 import Project from "../components/project"
 import HamburgerMenu from "../components/hamburgerMenu"
 import devices from "../utils/devices"
@@ -14,6 +15,22 @@ import Layout from "../components/layout"
 
 
 const Work = () => {
+  const data = useStaticQuery(graphql`
+    query Images {
+      image: file(relativePath: { eq: "spooky.png" }) {
+        id
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
       <SEO title="My Work" />
@@ -62,7 +79,6 @@ const Work = () => {
             alt="1989 Movies Project"
           />
         </div>
-        <Footer />
       </ContentWrapper>
     </Layout>
   )
@@ -79,7 +95,6 @@ const ContentWrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // overflow-x: hidden;
 
   header {
     text-align: center;
@@ -122,18 +137,18 @@ const ContentWrapper = styled.section`
   }
 
   @media (${devices.laptop}) {
-    .projects {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  @media (${devices.laptopL}) {
     header {
       h1 {
         font-size: 4rem;
       }
     }
 
+    .projects {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (${devices.laptopL}) {
     .projects {
       grid-template-columns: repeat(4, 1fr);
       margin-bottom: 12rem;

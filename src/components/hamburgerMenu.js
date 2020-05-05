@@ -192,7 +192,7 @@ const Nav = styled.nav`
       padding: 1rem 0;
       font-weight: 300;
       transition: 0.5s ease;
-      text-shadow: 0.1rem 0.1rem 0.1rem #2f3061;
+      text-shadow: 0.1rem 0.1rem 0.1rem #0e34a0;
 
       &::after {
         content: "";
