@@ -45,5 +45,21 @@ const ContactWrapper = styled.section`
   header {
     text-align: center;
     margin-top: 2rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #0e34a0;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-style: italic;
+      padding-bottom: 0.3rem;
+      border-bottom: 0.2rem solid #0e34a0;
+    }
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
   }
 `

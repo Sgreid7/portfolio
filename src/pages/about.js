@@ -104,7 +104,7 @@ const AboutWrapper = styled.section`
     }
 
     p {
-      padding: 1rem;
+      padding: 1rem 0 2rem 0;
       border: 0.2rem solid #0e34a0;
       text-shadow: 0.08rem 0.08rem 0.08rem #0e34a0;
       border-radius: 0.2rem;
@@ -112,6 +112,7 @@ const AboutWrapper = styled.section`
       -moz-box-shadow: inset 0 0 10px #000000;
       -webkit-box-shadow: inset 0 0 10px #000000;
       box-shadow: inset 0 0 10px #000000;
+      margin-bottom: 0;
     }
   }
 
@@ -147,6 +148,7 @@ const AboutWrapper = styled.section`
       flex-direction: row;
       width: 100%;
       justify-content: space-evenly;
+      padding-bottom: 0;
     }
 
     .portrait {
