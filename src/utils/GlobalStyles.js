@@ -14,7 +14,10 @@ export default createGlobalStyle`
   body {
     color: rgb(52, 52, 52);
     font-size: 16px;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: hidden;
   }
+  
+  ::-webkit-scrollbar {
+    display: none;
+}
 `
