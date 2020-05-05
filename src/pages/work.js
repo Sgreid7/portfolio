@@ -75,7 +75,6 @@ const ContentWrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // overflow-x: hidden;
 
   header {
     text-align: center;
@@ -118,18 +117,18 @@ const ContentWrapper = styled.section`
   }
 
   @media (${devices.laptop}) {
-    .projects {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  @media (${devices.laptop}) {
     header {
       h1 {
         font-size: 4rem;
       }
     }
 
+    .projects {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (${devices.laptopL}) {
     .projects {
       grid-template-columns: repeat(4, 1fr);
       margin-bottom: 12rem;
