@@ -25,6 +25,13 @@ const contact = () => {
             <a href="tel:+1-239-246-1640">(239) 246-1640</a>
           </div>
         </div>
+        <form name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true">
+          <input type="hidden" name="bot-field" />
+          <div>
+            <input type="text" name="name" placeholder="Name" autoComplete="off"/>
+            <input type="email" name="email" placeholder="Email" autoComplete="off"/>
+          </div>
+       </form>
       </ContactWrapper>
     </>
   )
