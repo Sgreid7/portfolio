@@ -25,13 +25,38 @@ const contact = () => {
             <a href="tel:+1-239-246-1640">(239) 246-1640</a>
           </div>
         </div>
-        <form name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true">
+        <form
+          name="contact"
+          method="post"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+        >
+          <h3>Leave a message</h3>
           <input type="hidden" name="bot-field" />
-          <div>
-            <input type="text" name="name" placeholder="Name" autoComplete="off"/>
-            <input type="email" name="email" placeholder="Email" autoComplete="off"/>
+          <div className="textbox">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              autoComplete="off"
+            />
           </div>
-       </form>
+          <div className="textbox">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              autoComplete="off"
+            />
+          </div>
+          <textarea
+            name="message"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          ></textarea>
+          <button>Send</button>
+        </form>
       </ContactWrapper>
     </>
   )
@@ -68,5 +93,12 @@ const ContactWrapper = styled.section`
   a {
     color: #fff;
     text-decoration: none;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `
