@@ -1,12 +1,14 @@
 import React from "react"
+import styled from "styled-components"
 import SEO from "../components/seo"
 import HamburgerMenu from "../components/hamburgerMenu"
-import styled from "styled-components"
+import Layout from "../components/layout"
+
 import devices from "../utils/devices"
 
 const contact = () => {
   return (
-    <>
+    <Layout>
       <SEO title="Contact Me" />
       <HamburgerMenu />
       <ContactWrapper>
@@ -70,7 +72,7 @@ const contact = () => {
           </button>
         </form>
       </ContactWrapper>
-    </>
+    </Layout>
   )
 }
 

@@ -8,9 +8,11 @@ import Tampa from "../images/tampa.jpg"
 import devices from "../utils/devices"
 import HamburgerMenu from "../components/hamburgerMenu"
 import SEO from "../components/seo"
+import Layout from "../components/layout"
+
 
 const IndexPage = () => (
-  <>
+  <Layout>
     <SEO title="Welcome to My Portfolio" />
     <HamburgerMenu />
     <HomeWrapper>
@@ -27,7 +29,7 @@ const IndexPage = () => (
         </a>
       </div>
     </HomeWrapper>
-  </>
+  </Layout>
 )
 
 export default IndexPage
