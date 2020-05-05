@@ -1,4 +1,6 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 import styled from "styled-components"
 import SEO from "../components/seo"
 import Project from "../components/project"
@@ -11,6 +13,22 @@ import Spooky from "../images/spooky.png"
 import Movies from "../images/movies.png"
 
 const Work = () => {
+  const data = useStaticQuery(graphql`
+    query Images {
+      image: file(relativePath: { eq: "spooky.png" }) {
+        id
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <>
       <SEO title="My Work" />
