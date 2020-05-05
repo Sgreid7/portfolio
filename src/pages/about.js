@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import Layout from "../components/layout"
 import devices from "../utils/devices"
 import Portrait from "../images/Portrait.jpg"
 import SEO from "../components/seo"
@@ -8,7 +8,7 @@ import styled from "styled-components"
 
 const About = () => {
   return (
-    <>
+    <Layout>
       <SEO title="About Me" />
       <HamburgerMenu />
       <AboutWrapper>
@@ -39,7 +39,7 @@ const About = () => {
           </div>
         </div>
       </AboutWrapper>
-    </>
+    </Layout>
   )
 }
 

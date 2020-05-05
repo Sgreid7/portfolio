@@ -1,11 +1,13 @@
 import React from "react"
+import styled from "styled-components"
 import SEO from "../components/seo"
 import HamburgerMenu from "../components/hamburgerMenu"
-import styled from "styled-components"
+import Layout from "../components/layout"
+
 
 const contact = () => {
   return (
-    <>
+    <Layout>
       <SEO title="Contact Me" />
       <HamburgerMenu />
       <ContactWrapper>
@@ -26,7 +28,7 @@ const contact = () => {
           </div>
         </div>
       </ContactWrapper>
-    </>
+    </Layout>
   )
 }
 

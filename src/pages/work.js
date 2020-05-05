@@ -10,10 +10,12 @@ import ColorPicker from "../images/colorpicker.png"
 import Hangman from "../images/hangman.png"
 import Spooky from "../images/spooky.png"
 import Movies from "../images/movies.png"
+import Layout from "../components/layout"
+
 
 const Work = () => {
   return (
-    <>
+    <Layout>
       <SEO title="My Work" />
       <HamburgerMenu />
       <ContentWrapper>
@@ -62,7 +64,7 @@ const Work = () => {
         </div>
         <Footer />
       </ContentWrapper>
-    </>
+    </Layout>
   )
 }
 
