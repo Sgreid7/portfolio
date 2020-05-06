@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import SEO from "../components/seo"
 import HamburgerMenu from "../components/hamburgerMenu"
@@ -41,15 +41,15 @@ const contact = () => {
         <form
           name="contact"
           method="post"
-          netlify-honeypot="bot-field"
           data-netlify="true"
+          netlify-honeypot="bot-field"
         >
           <h3>Leave a message</h3>
-          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="contact"/>
 
           <div className="textbox">
-            <input type="text" name="name" placeholder="Name" />
-            <input type="email" name="email" placeholder="Email" />
+            <input type="text" name="name" placeholder="Name" required/>
+            <input type="email" name="email" placeholder="Email" required/>
           </div>
 
           <div className="text">
