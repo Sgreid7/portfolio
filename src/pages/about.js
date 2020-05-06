@@ -60,10 +60,12 @@ const AboutWrapper = styled.section`
 
     h1 {
       font-size: 2.5rem;
+      font-family: "Merriweather", sans-serif;
     }
 
     h2 {
       font-style: italic;
+      font-family: "Merriweather", sans-serif;
       padding-bottom: 0.3rem;
       border-bottom: 0.2rem solid #0e34a0;
     }
@@ -97,10 +99,12 @@ const AboutWrapper = styled.section`
     margin-top: 1rem;
     text-align: center;
     width: 80vw;
+    font-family: "Merriweather", sans-serif;
 
     h3 {
       text-shadow: 0.1rem 0.1rem 0.1rem #0e34a0;
       letter-spacing: 0.1rem;
+      font-family: "Raleway", sans-serif;
     }
 
     p {
@@ -147,7 +151,7 @@ const AboutWrapper = styled.section`
       flex-direction: row;
       width: 100%;
       justify-content: space-evenly;
-      padding-bottom: 2rem;
+      /* padding-bottom: 4.1rem; */
     }
 
     .portrait {
@@ -160,6 +164,10 @@ const AboutWrapper = styled.section`
 
       h3 {
         font-size: 1.7rem;
+      }
+
+      p {
+        font-size: 1.1rem;
       }
     }
   }

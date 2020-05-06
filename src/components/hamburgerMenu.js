@@ -217,6 +217,7 @@ const Nav = styled.nav`
   & a {
     color: #fff;
     text-decoration: none;
+    font-family: "Merriweather", sans-serif;
   }
 
   @media (${devices.tablet}) {

@@ -10,7 +10,6 @@ import HamburgerMenu from "../components/hamburgerMenu"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 
-
 const IndexPage = () => (
   <Layout>
     <SEO title="Welcome to My Portfolio" />
@@ -68,11 +67,13 @@ const HomeWrapper = styled.header`
   h2 {
     margin: 0;
     font-weight: 400;
+    font-family: "Raleway", sans-serif;
   }
 
   h2 {
     font-style: italic;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
     margin-bottom: 1rem;
     padding: 0.2rem 1rem;
     background: rgba(52, 52, 52, 0.3);
@@ -89,8 +90,10 @@ const HomeWrapper = styled.header`
       margin: 0 1rem;
       padding: 0.5rem;
       transition: 0.5s ease;
-      background: #000;
+      /* background: #fff; */
+      background: transparent;
       color: #fff;
+      border: 0.1rem solid #000;
       border-radius: 50%;
       text-align: center;
 
@@ -115,8 +118,10 @@ const HomeWrapper = styled.header`
 
       &:hover {
         color: #0e34a0;
-        box-shadow: 0 0 0.5rem #0e34a0;
-        text-shadow: 0 0 0.5rem #0e34a0;
+        background: #fff;
+        border: 0.1rem solid #0e34a0;
+        box-shadow: 0 0 1rem #0e34a0;
+        text-shadow: 1rem 1rem 1rem #0e34a0;
       }
     }
   }
@@ -145,7 +150,6 @@ const HomeWrapper = styled.header`
   @media (${devices.laptop}) {
     h1 {
       font-size: 6rem;
-      margin-top: 10vh;
       text-shadow: 0.1rem 0.1rem 0.1rem #0e34a0;
       line-height: 1.5;
     }
@@ -157,7 +161,7 @@ const HomeWrapper = styled.header`
     }
 
     .icons {
-      margin-top: 9rem;
+      margin-top: 8rem;
     }
   }
 

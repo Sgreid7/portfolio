@@ -13,7 +13,6 @@ import Spooky from "../images/spooky.png"
 import Movies from "../images/movies.png"
 import Layout from "../components/layout"
 
-
 const Work = () => {
   const data = useStaticQuery(graphql`
     query Images {
@@ -107,14 +106,17 @@ const ContentWrapper = styled.section`
     grid-template-columns: repeat(1, 1fr);
     margin-top: 2rem;
     margin-bottom: 4rem;
+    font-family: "Raleway", sans-serif;
   }
 
   h1 {
     font-size: 2.5rem;
+    font-family: "Merriweather", sans-serif;
   }
 
   h2 {
     font-style: italic;
+    font-family: "Merriweather", sans-serif;
     padding-bottom: 0.3rem;
     border-bottom: 0.2rem solid #0e34a0;
   }

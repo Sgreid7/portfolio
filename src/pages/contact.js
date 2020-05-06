@@ -43,24 +43,13 @@ const contact = () => {
           method="post"
           netlify-honeypot="bot-field"
           data-netlify="true"
-          autoComplete="foo"
         >
           <h3>Leave a message</h3>
           <input type="hidden" name="bot-field" />
 
           <div className="textbox">
-            <input
-              type="text"
-              name="name"
-              autoComplete="foo"
-              placeholder="Name"
-            />
-            <input
-              type="email"
-              name="email"
-              autoComplete="foo"
-              placeholder="Email"
-            />
+            <input type="text" name="name" placeholder="Name" />
+            <input type="email" name="email" placeholder="Email" />
           </div>
 
           <div className="text">
@@ -94,12 +83,14 @@ const ContactWrapper = styled.section`
 
     h1 {
       font-size: 2.5rem;
+      font-family: "Merriweather", sans-serif;
     }
 
     h2 {
       font-style: italic;
       padding-bottom: 0.3rem;
       border-bottom: 0.2rem solid #0e34a0;
+      font-family: "Merriweather", sans-serif;
     }
 
     span {
@@ -113,6 +104,8 @@ const ContactWrapper = styled.section`
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    font-family: "Merriweather", sans-serif;
+    font-size: 1.1rem;
 
     div {
       border: 3px solid #dfdfdf;
@@ -149,6 +142,7 @@ const ContactWrapper = styled.section`
     background: rgba(0, 0, 0, 0.3);
     border: 0.2rem solid #0e34a0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: "Merriweather", sans-serif;
 
     .textbox {
       position: relative;
@@ -186,6 +180,7 @@ const ContactWrapper = styled.section`
       transition: 0.3s ease;
       border-radius: 0.05rem;
       z-index: 1;
+      font-family: "Merriweather", sans-serif;
 
       &:hover {
         color: #fff;
@@ -240,6 +235,7 @@ const ContactWrapper = styled.section`
       font-size: 1.5rem;
       text-shadow: 0.1rem 0.1rem 0.1rem #0e34a0;
       margin-bottom: 1rem;
+      font-family: "Merriweather", sans-serif;
     }
   }
 
@@ -276,6 +272,10 @@ const ContactWrapper = styled.section`
       textarea {
         width: 50vw;
         height: 30vh;
+      }
+
+      button {
+        width: 30vw;
       }
     }
   }
