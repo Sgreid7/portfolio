@@ -25,9 +25,9 @@ const About = () => {
             <h3>BIO</h3>
             <p>
               I just graduated from Suncoast Developer's Guild, a 3 month
-              intensive code school, learning full stack web development. I'm a
+              intensive code school, where I learned full stack web development. I'm a
               naturally curious person with an affinity for creating
-              user-friendly web applications. I enjoy creating and designing
+              user-friendly web applications. I love creating and designing
               products with the purpose of solving the user's problems, and
               creating something to be proud of as well. I am a firm believer that preparation is
               the key to achieving one's goals and delivering exceptional
