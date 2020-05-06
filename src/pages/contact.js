@@ -44,7 +44,7 @@ const contact = () => {
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
-          {/* <input type="hidden" name="form-name" value="contact"/> */}
+          <input type="hidden" name="form-name" value="contact"/>
           <h3>Leave a message</h3>
 
           <div className="textbox">
