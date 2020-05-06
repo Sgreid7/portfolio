@@ -48,8 +48,8 @@ const contact = () => {
           <input type="hidden" name="bot-field" />
 
           <div className="textbox">
-            <input type="text" name="name" placeholder="Name" autoComplete="new-password" />
-            <input type="email" name="email" placeholder="Email" autoComplete="new-password" />
+            <input type="text" name="name" placeholder="Name" />
+            <input type="email" name="email" placeholder="Email" />
           </div>
 
           <div className="text">
