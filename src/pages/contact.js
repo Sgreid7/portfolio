@@ -42,7 +42,7 @@ const contact = () => {
           name="contact"
           method="post"
           data-netlify="true"
-          netlify-honeypot="bot-field"
+          data-netlify-honeypot="bot-field"
         >
           <h3>Leave a message</h3>
           <input type="hidden" name="form-name" value="contact"/>
