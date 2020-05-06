@@ -56,11 +56,12 @@ const HomeWrapper = styled.header`
 
   h1 {
     font-size: 4rem;
+    text-shadow: 0.08rem 0.08rem 0.08rem #0e34a0;
   }
 
   span {
     color: #2f3061;
-    text-shadow: 0.1rem 0.1rem 0.1rem #fff;
+    text-shadow: 0.05rem 0.05rem 0.05rem #fff;
   }
 
   h1,
@@ -77,6 +78,7 @@ const HomeWrapper = styled.header`
     margin-bottom: 1rem;
     padding: 0.2rem 1rem;
     background: rgba(52, 52, 52, 0.3);
+    text-shadow: 0.1rem 0.1rem 0.1rem #0e34a0;
   }
 
   .icons {
@@ -90,7 +92,6 @@ const HomeWrapper = styled.header`
       margin: 0 1rem;
       padding: 0.5rem;
       transition: 0.5s ease;
-      /* background: #fff; */
       background: transparent;
       color: #fff;
       border: 0.1rem solid #000;
@@ -170,8 +171,12 @@ const HomeWrapper = styled.header`
       font-size: 8rem;
     }
 
+    h2 {
+      font-size: 1.7rem;
+    }
+
     .icons {
-      margin-top: 15rem;
+      margin-top: 10rem;
     }
   }
 `

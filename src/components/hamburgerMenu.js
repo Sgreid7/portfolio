@@ -273,5 +273,18 @@ const Nav = styled.nav`
   }
 
   @media (${devices.laptopL}) {
+    .nav-item {
+      .nav-link {
+        font-size: 2rem;
+      }
+    }
+
+    .menu-branding {
+      .portrait {
+        width: 20rem;
+        height: 20rem;
+      }
+    }
+
   }
 `

@@ -48,8 +48,8 @@ const contact = () => {
           <input type="hidden" name="bot-field" />
 
           <div className="textbox">
-            <input type="text" name="name" placeholder="Name" />
-            <input type="email" name="email" placeholder="Email" />
+            <input type="text" name="name" placeholder="Name" autoComplete="new-password" />
+            <input type="email" name="email" placeholder="Email" autoComplete="new-password" />
           </div>
 
           <div className="text">
@@ -121,6 +121,8 @@ const ContactWrapper = styled.section`
 
       :hover {
         background: #2f3061;
+        transform: translateY(-0.4rem);
+        box-shadow: 0 0.5rem 0.5rem #000;
       }
     }
   }
@@ -177,7 +179,7 @@ const ContactWrapper = styled.section`
       cursor: pointer;
       font-size: 1.5rem;
       letter-spacing: 0.1rem;
-      transition: 0.3s ease;
+      transition: 0.5s ease;
       border-radius: 0.05rem;
       z-index: 1;
       font-family: "Merriweather", sans-serif;
@@ -195,7 +197,7 @@ const ContactWrapper = styled.section`
         width: 100%;
         height: 100%;
         background: #0e34a0;
-        transition: 0.3s ease;
+        transition: 0.5s ease;
         z-index: -1;
       }
     }
@@ -277,6 +279,12 @@ const ContactWrapper = styled.section`
       button {
         width: 30vw;
       }
+    }
+  }
+
+  @media (${devices.laptopL}) {
+    form {  
+      width: 73.5vw;
     }
   }
 `

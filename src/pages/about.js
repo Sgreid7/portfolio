@@ -25,11 +25,11 @@ const About = () => {
             <h3>BIO</h3>
             <p>
               I just graduated from Suncoast Developer's Guild, a 3 month
-              intensive code school, learning full-stack web development. I'm a
+              intensive code school, learning full stack web development. I'm a
               naturally curious person with an affinity for creating
               user-friendly web applications. I enjoy creating and designing
-              products with the purpose of solving the user's problems and
-              satisfying them as well. I am a firm believer that preparation is
+              products with the purpose of solving the user's problems, and
+              creating something to be proud of as well. I am a firm believer that preparation is
               the key to achieving one's goals and delivering exceptional
               results. I enjoy a good challenge, and I'm not hesitant to start
               learning new technologies that I can start to implement in my
@@ -123,7 +123,6 @@ const AboutWrapper = styled.section`
 
   @media (${devices.tablet}) {
     header {
-      /* margin-top: 1rem; */
 
       h1 {
         font-size: 3rem;
@@ -175,6 +174,7 @@ const AboutWrapper = styled.section`
   @media (${devices.laptopL}) {
     .bio {
       width: 30vw;
+      padding-bottom: 4.6rem;
 
       h3 {
         font-size: 2rem;
