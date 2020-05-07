@@ -94,7 +94,7 @@ const HomeWrapper = styled.header`
       transition: 0.5s ease;
       background: transparent;
       color: #fff;
-      border: 0.1rem solid #000;
+      border: 0.1rem solid #fff;
       border-radius: 50%;
       text-align: center;
 
