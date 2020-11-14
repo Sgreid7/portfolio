@@ -12,12 +12,16 @@ export default createGlobalStyle`
   }
 
   body {
-    color: rgb(52, 52, 52);
     font-size: 16px;
     overflow: hidden;
   }
   
   ::-webkit-scrollbar {
     display: none;
-}
+  }
+
+  .container {
+    max-width: 1024px;
+    width: 100%;    
+  }
 `
