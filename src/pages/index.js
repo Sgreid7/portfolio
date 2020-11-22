@@ -4,6 +4,7 @@ import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import About from "../components/about"
+import Projects from "../components/projects"
 import styled, { keyframes } from "styled-components"
 
 import devices from "../utils/devices"
@@ -26,16 +27,9 @@ const IndexPage = () => (
           <FontAwesomeIcon icon={faArrowRight} size="sm" className="arrow" />
         </button>
       </header>
-      {/* <div className="icons">
-        <a href="https://www.linkedin.com/in/samgreider/">
-        <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
-        </a>
-        <a href="https://github.com/Sgreid7">
-        <FontAwesomeIcon icon={faGithub} size="2x" />
-        </a>
-      </div> */}
     </HomeWrapper>
     <About />
+    <Projects />
   </Layout>
 )
 

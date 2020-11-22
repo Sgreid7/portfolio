@@ -13,7 +13,6 @@ export default createGlobalStyle`
 
   body {
     font-size: 16px;
-    overflow: hidden;
   }
   
   ::-webkit-scrollbar {
@@ -21,7 +20,7 @@ export default createGlobalStyle`
   }
 
   .container {
-    max-width: 1024px;
+    max-width: 1200px;
     width: 100%;    
   }
 `

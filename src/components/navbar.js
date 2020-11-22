@@ -16,7 +16,7 @@ const Navbar = () => {
           <li>About</li>
         </a>
         <a href="/">
-          <li>Work</li>
+          <li>Projects</li>
         </a>
         <a href="/">
           <li>Contact</li>
@@ -39,7 +39,8 @@ const Nav = styled.nav`
   /* background: #020103; */
   background: #252934;
   font-family: "Mulish", sans-serif;
-  border-bottom: 0.125rem solid #0018a8;
+  /* border-bottom: 0.125rem solid #0018a8; */
+  border-bottom: 0.125rem solid #e31b6d;
 
   & ul {
     display: flex;

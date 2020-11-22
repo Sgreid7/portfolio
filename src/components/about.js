@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
 import devices from "../utils/devices"
 import Headshot from "../images/headshot.jpg"
@@ -10,6 +10,12 @@ import styled from "styled-components"
 import { useSpring, animated } from "react-spring"
 
 const About = () => {
+  const [flipped, set] = useState(false)
+  const { transform, opacity } = useSpring({
+    opacity: flipped ? 1 : 0,
+    transform: `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
+    config: { mass: 5, tension: 500, friction: 80 },
+  })
   return (
     <AboutWrapper>
       <div className="title">
@@ -18,47 +24,113 @@ const About = () => {
 
       <div className="underline"></div>
 
-      <div className="squares">
-        <div className="square">
-          <UilTachometerFastAlt size="50" color="#05C2C9" />
-          <p className="title">Speed</p>
-          <p>Fast load speeds are my priority.</p>
+      <div className="container">
+        <div className="squares">
+          <div onClick={() => set(state => !state)}>
+            <animated.div
+              className="square front"
+              style={{
+                opacity,
+                transform: transform.interpolate(t => `${t} rotateY(180deg)`),
+              }}
+            >
+              <UilTachometerFastAlt
+                size="50"
+                color="#05C2C9"
+                className="icon"
+              />
+              <p className="title">Speed</p>
+            </animated.div>
+            <animated.div
+              className="square back"
+              style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
+            >
+              <UilTachometerFastAlt
+                size="50"
+                color="#05C2C9"
+                className="icon"
+              />
+              <p className="text">Fast load speeds are my priority.</p>
+            </animated.div>
+          </div>
+          <div onClick={() => set(state => !state)}>
+            <animated.div
+              className="square front"
+              style={{
+                opacity,
+                transform: transform.interpolate(t => `${t} rotateY(180deg)`),
+              }}
+            >
+              <UilExpandArrowsAlt size="50" color="#05C2C9" className="icon" />
+              <p className="title">Responsive</p>
+            </animated.div>
+            <animated.div
+              className="square back"
+              style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
+            >
+              <UilExpandArrowsAlt size="50" color="#05C2C9" className="icon" />
+              <p className="text">My projects scale on all device sizes.</p>
+            </animated.div>
+          </div>
+          <div onClick={() => set(state => !state)}>
+            <animated.div
+              className="square front"
+              style={{
+                opacity,
+                transform: transform.interpolate(t => `${t} rotateY(180deg)`),
+              }}
+            >
+              <UilLightbulbAlt size="50" color="#05C2C9" className="icon" />
+              <p className="title">Intuitive</p>
+            </animated.div>
+            <animated.div
+              className="square back"
+              style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
+            >
+              <UilLightbulbAlt size="50" color="#05C2C9" className="icon" />
+              <p className="text">Designed for user-friendly UI/UX.</p>
+            </animated.div>
+          </div>
+          <div onClick={() => set(state => !state)}>
+            <animated.div
+              className="square front"
+              style={{
+                opacity,
+                transform: transform.interpolate(t => `${t} rotateY(180deg)`),
+              }}
+            >
+              <UilRocket size="50" color="#05C2C9" className="icon" />
+              <p className="title">Dynamic</p>
+            </animated.div>
+            <animated.div
+              className="square back"
+              style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
+            >
+              <UilRocket size="50" color="#05C2C9" className="icon" />
+              <p className="text">
+                I strive to create websites that come to life.
+              </p>
+            </animated.div>
+          </div>
         </div>
-        <div className="square">
-          <UilExpandArrowsAlt size="50" color="#05C2C9" />
-          <p className="title">Responsive</p>
-          <p>My projects scale on all device sizes.</p>
-        </div>
-        <div className="square">
-          <UilLightbulbAlt size="50" color="#05C2C9" />
-          <p className="title">Intuitive</p>
-          <p>Designed for user-friendly UI/UX.</p>
-        </div>
-        <div className="square">
-          <UilRocket size="50" color="#05C2C9" />
-          <p className="title">Dynamic</p>
-          <p>I strive to create websites that come to life.</p>
-        </div>
-      </div>
 
-      <div className="image">
-        <animated.img src={Headshot} alt="My headshot" />
-      </div>
-
-      <div className="bio">
-        <p>
-          In 2020, I graduated from Suncoast Developer's Guild, a 3-month
-          intensive code school, where I learned full-stack web development. I
-          delivered my thesis project on-time using React for the front-end and
-          C# .NET for the back-end, to create a satellite tracker app. I was the
-          only person in my cohort who chose to use a framework outside of what
-          was being taught (Gatsby JS), which I self-taught alongside the rest
-          of the curriculum. I'm a naturally curious person and I’ve found that
-          software development is a way for me to continuously learn while also
-          solving real-world problems. I believe that preparation is the key to
-          creating user-friendly web applications and I bring that attitude to
-          every project I take on.
-        </p>
+        <div className="bio">
+          <img src={Headshot} alt="My headshot" />
+          <p>
+            In 2020, I graduated from Suncoast Developer's Guild, a 3-month
+            intensive code school, where I learned full-stack web development. I
+            delivered my thesis project on-time using React for the front-end
+            and C# .NET for the back-end to create a satellite tracker app. I
+            was the only person in my cohort who chose to use a framework
+            outside of what was being taught (Gatsby JS), which I self-taught
+            alongside the rest of the curriculum. I'm a naturally curious person
+            and I’ve found that software development is a way for me to
+            continuously challenge myself while also solving real-world
+            problems. I believe that preparation is the key to creating
+            user-friendly web applications, and I bring that attitude to every
+            project I take on.
+          </p>
+        </div>
       </div>
     </AboutWrapper>
   )
@@ -68,7 +140,6 @@ export default About
 
 const AboutWrapper = styled.section`
   background: #fff;
-  color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,7 +169,9 @@ const AboutWrapper = styled.section`
   }
 
   & .squares {
+    margin: 3rem 0;
     width: 100%;
+    max-width: 1200px;
     display: flex;
     justify-content: space-evenly;
 
@@ -108,66 +181,70 @@ const AboutWrapper = styled.section`
       justify-content: center;
       align-items: center;
       position: relative;
-      max-width: 15rem;
+      max-width: 13rem;
       min-height: 10rem;
       width: 100%;
       background: #fff;
+      margin: 0 0.5rem;
       padding: 1rem;
       box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.3);
-      transition: all 0.3s ease;
-      will-change: transform;
+      will-change: transform, opacity;
+      cursor: pointer;
       border-radius: 1rem;
+      border: 3px solid #05c2c9;
 
       & .icon {
-        width: 10rem;
-        height: 10rem;
-        color: red;
       }
 
       & p {
         margin: 0;
-        text-align: center;
       }
 
       & .title {
-        font-size: 1.05rem;
+        font-size: 1.15rem;
         font-weight: bold;
         margin: 0.5rem 0;
       }
 
+      & .text {
+        text-align: center;
+        /* opacity: 0; */
+        /* max-height: 0; */
+        /* transition: all 0.3s ease; */
+      }
+
       &:hover {
         box-shadow: 0px 15px 40px -10px rgba(0, 0, 0, 0.4);
-      }
-    }
-  }
+        cursor: pointer;
 
-  & .image {
-    display: flex;
-    justify-content: center;
-
-    & img {
-      max-width: 12%;
-      border-radius: 50%;
-      margin: 0;
-      box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
-      transition: box-shadow 0.5s;
-      will-change: transform;
-      border: 5px solid white;
-
-      &:hover {
-        box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+        /* & .text {
+          transition: all 0.3s ease;
+          opacity: 1;
+          max-height: 40px;
+        } */
       }
     }
   }
 
   & .bio {
-    text-align: center;
-    width: 40rem;
-    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
 
     p {
-      margin-bottom: 0;
+      margin: 0 2rem;
       font-size: 1.05rem;
+      width: 50%;
+      text-align: center;
+    }
+
+    & img {
+      max-width: 18%;
+      border-radius: 50%;
+      margin: 0 2rem;
+      box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.3);
+      transition: box-shadow 0.5s;
+      will-change: transform;
     }
   }
 `

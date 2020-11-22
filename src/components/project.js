@@ -1,19 +1,24 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import devices from "../utils/devices"
 
-const Project = ({ site, code, image, alt }) => {
+const Project = ({ site, code, image, alt, desc }) => {
   return (
     <Card>
-      <Image src={image} alt={alt} />
-      <div className="container">
-        <a href={site}>
-          <button>Project</button>
-        </a>
-        <a href={code}>
-          <button>Code</button>
-        </a>
+      <img src={image} alt={alt} />
+      <div className="overlay overlayTop">
+        <div className="text">
+          <h4 className="title">{alt}</h4>
+          <p className="desc">{desc}</p>
+          <button>Learn More</button>
+        </div>
       </div>
+      {/* <a href={site}>
+        <button>Project</button>
+      </a>
+      <a href={code}>
+        <button>Code</button>
+      </a> */}
     </Card>
   )
 }
@@ -21,47 +26,79 @@ const Project = ({ site, code, image, alt }) => {
 export default Project
 
 const Card = styled.section`
-  text-align: center;
-  width: 80%;
-  margin: 0 auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 25rem;
+  max-height: 20rem;
+  cursor: pointer;
+  margin: 2rem 0;
 
-  :hover {
-    animation: 1.5s infinite hover;
-    box-shadow: 0 0 1.3rem #dfdfdf;
+  img {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
   }
 
-  .container {
+  & .overlay {
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    background: #f5f5f5;
+  }
+
+  & .overlayTop {
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+  }
+
+  & .text {
+    color: #444649;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
     text-align: center;
-    padding: 0.5rem 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    display: none;
 
-    a {
-      margin: 0.2rem;
+    & h4,
+    p {
+      margin: 0;
     }
 
-    button {
-      background: transparent;
-      border: 0.05rem solid #fff;
-      color: #fff;
-      height: 2rem;
-      width: 5rem;
-      transition: 0.3s ease;
+    & .desc {
+      color: #e31b6d;
+    }
+  }
 
-      :hover {
-        background: #0e34a0;
-        border: 0.05rem solid #0e34a0;
-        transform: translateY(-0.2rem);
-        box-shadow: 0 0.3rem 0.3rem #000;
-      }
+  button {
+    background: #f5f5f5;
+    border: 0.1rem solid #e31b6d;
+    outline: none;
+    text-transform: uppercase;
+    width: 8rem;
+    padding: 0.25rem;
+    transition: 0.4s ease;
+    margin-top: 2rem;
+    cursor: pointer;
+  }
+
+  &:hover {
+    & .overlay {
+      opacity: 1;
     }
 
-    @media (${devices.laptopL}) {
-      button {
-        width: 8rem;
-      }
+    & .overlayTop {
+      height: 100%;
+    }
+
+    & .text {
+      display: block;
     }
   }
 
@@ -73,16 +110,5 @@ const Card = styled.section`
     50% {
       transform: translateY(-0.5rem);
     }
-  }
-`
-
-const Image = styled.img`
-  margin: 0;
-  border: 0.1rem solid #0e34a0;
-  // width: 25vw;
-  // width: 100%;
-  height: 10rem;
-
-  @media (${devices.tablet}) {
   }
 `
