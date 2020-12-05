@@ -5,6 +5,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import About from "../components/about"
 import Projects from "../components/projects"
+import Contact from "../components/contact"
 import styled, { keyframes } from "styled-components"
 
 import devices from "../utils/devices"
@@ -30,6 +31,7 @@ const IndexPage = () => (
     </HomeWrapper>
     <About />
     <Projects />
+    <Contact />
   </Layout>
 )
 
@@ -52,6 +54,7 @@ const HomeWrapper = styled.section`
   overflow: hidden;
   position: relative;
   font-family: "Mulish", sans-serif;
+  clip-path: path("M 0 0 L 50 100 L 100 0 Z");
 
   & header {
     display: flex;
@@ -98,9 +101,9 @@ const HomeWrapper = styled.section`
       /* font-weight: bold; */
       letter-spacing: 0.075rem;
       transition: 0.4s ease;
-      -webkit-box-shadow: 0 10px 6px -6px #000;
+      /* -webkit-box-shadow: 0 10px 6px -6px #000;
       -moz-box-shadow: 0 10px 6px -6px #000;
-      box-shadow: 0 10px 6px -6px #000;
+      box-shadow: 0 10px 6px -6px #000; */
 
       & .arrow {
         transition: 0.4s ease;
@@ -110,6 +113,7 @@ const HomeWrapper = styled.section`
       &:hover {
         background: #000;
         border: 0.15rem solid #000;
+        box-shadow: 0 10px 6px -6px #fff;
         /* font-weight: bold; */
 
         & .arrow {

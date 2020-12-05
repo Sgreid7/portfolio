@@ -118,7 +118,6 @@ const ProjectsWrapper = styled.section`
 
   .projects {
     display: grid;
-    /* grid-gap: 2rem; */
     grid-template-columns: repeat(3, 1fr);
 
     & .space {

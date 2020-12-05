@@ -10,15 +10,14 @@ const Project = ({ site, code, image, alt, desc }) => {
         <div className="text">
           <h4 className="title">{alt}</h4>
           <p className="desc">{desc}</p>
-          <button>Learn More</button>
+          <a href={code} target="_blank">
+            <button>Code</button>
+          </a>
+          <a href={site} target="_blank">
+            <button>Site</button>
+          </a>
         </div>
       </div>
-      {/* <a href={site}>
-        <button>Project</button>
-      </a>
-      <a href={code}>
-        <button>Code</button>
-      </a> */}
     </Card>
   )
 }
@@ -33,7 +32,6 @@ const Card = styled.section`
   justify-content: center;
   max-width: 25rem;
   max-height: 20rem;
-  cursor: pointer;
   margin: 2rem 0;
 
   img {
@@ -48,6 +46,7 @@ const Card = styled.section`
     transition: all 0.4s ease-in-out;
     opacity: 0;
     background: #f5f5f5;
+    border: 0.125rem solid #e31b6d;
   }
 
   & .overlayTop {
@@ -66,6 +65,11 @@ const Card = styled.section`
     text-align: center;
     display: none;
 
+    & h4 {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
     & h4,
     p {
       margin: 0;
@@ -78,18 +82,25 @@ const Card = styled.section`
 
   button {
     background: #f5f5f5;
-    border: 0.1rem solid #e31b6d;
+    border: 0.125rem solid #e31b6d;
+    border-radius: 32px;
     outline: none;
     text-transform: uppercase;
     width: 8rem;
     padding: 0.25rem;
     transition: 0.4s ease;
-    margin-top: 2rem;
+    margin: 2rem 0.5rem 0 1rem;
     cursor: pointer;
+
+    &:hover {
+      background: #e31b6d;
+      color: #fff;
+    }
   }
 
   &:hover {
     & .overlay {
+      border: 0.125rem solid #e31b6d;
       opacity: 1;
     }
 

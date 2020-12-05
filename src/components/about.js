@@ -26,91 +26,27 @@ const About = () => {
 
       <div className="container">
         <div className="squares">
-          <div onClick={() => set(state => !state)}>
-            <animated.div
-              className="square front"
-              style={{
-                opacity,
-                transform: transform.interpolate(t => `${t} rotateY(180deg)`),
-              }}
-            >
-              <UilTachometerFastAlt
-                size="50"
-                color="#05C2C9"
-                className="icon"
-              />
-              <p className="title">Speed</p>
-            </animated.div>
-            <animated.div
-              className="square back"
-              style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
-            >
-              <UilTachometerFastAlt
-                size="50"
-                color="#05C2C9"
-                className="icon"
-              />
-              <p className="text">Fast load speeds are my priority.</p>
-            </animated.div>
+          <div className="square middle" onClick={() => set(state => !state)}>
+            <UilTachometerFastAlt size="50" color="#05C2C9" className="icon" />
+            <p className="title">Speed</p>
+            <p className="text">Fast load speeds are my priority.</p>
           </div>
-          <div onClick={() => set(state => !state)}>
-            <animated.div
-              className="square front"
-              style={{
-                opacity,
-                transform: transform.interpolate(t => `${t} rotateY(180deg)`),
-              }}
-            >
-              <UilExpandArrowsAlt size="50" color="#05C2C9" className="icon" />
-              <p className="title">Responsive</p>
-            </animated.div>
-            <animated.div
-              className="square back"
-              style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
-            >
-              <UilExpandArrowsAlt size="50" color="#05C2C9" className="icon" />
-              <p className="text">My projects scale on all device sizes.</p>
-            </animated.div>
+          <div className="square middle" onClick={() => set(state => !state)}>
+            <UilExpandArrowsAlt size="50" color="#05C2C9" className="icon" />
+            <p className="title">Responsive</p>
+            <p className="text">My projects scale on all device sizes.</p>
           </div>
-          <div onClick={() => set(state => !state)}>
-            <animated.div
-              className="square front"
-              style={{
-                opacity,
-                transform: transform.interpolate(t => `${t} rotateY(180deg)`),
-              }}
-            >
-              <UilLightbulbAlt size="50" color="#05C2C9" className="icon" />
-              <p className="title">Intuitive</p>
-            </animated.div>
-            <animated.div
-              className="square back"
-              style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
-            >
-              <UilLightbulbAlt size="50" color="#05C2C9" className="icon" />
-              <p className="text">Designed for user-friendly UI/UX.</p>
-            </animated.div>
+          <div className="square middle" onClick={() => set(state => !state)}>
+            <UilLightbulbAlt size="50" color="#05C2C9" className="icon" />
+            <p className="title">Intuitive</p>
+            <p className="text">Designed for user-friendly UI/UX.</p>
           </div>
-          <div onClick={() => set(state => !state)}>
-            <animated.div
-              className="square front"
-              style={{
-                opacity,
-                transform: transform.interpolate(t => `${t} rotateY(180deg)`),
-              }}
-            >
-              <UilRocket size="50" color="#05C2C9" className="icon" />
-              <p className="title">Dynamic</p>
-            </animated.div>
-            <animated.div
-              className="square back"
-              style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
-            >
-              <UilRocket size="50" color="#05C2C9" className="icon" />
-              <p className="text">
-                I strive to create websites that come to life.
-              </p>
-            </animated.div>
+          <div className="square middle" onClick={() => set(state => !state)}>
+            <UilRocket size="50" color="#05C2C9" className="icon" />
+            <p className="title">Dynamic</p>
+            <p className="text">
+              I strive to create websites that come to life.
+            </p>
           </div>
         </div>
 
@@ -147,6 +83,7 @@ const AboutWrapper = styled.section`
   font-family: "Mulish", sans-serif;
   padding: 2rem 0;
   color: #444649;
+  position: relative;
 
   .title {
     display: flex;
@@ -174,13 +111,14 @@ const AboutWrapper = styled.section`
     max-width: 1200px;
     display: flex;
     justify-content: space-evenly;
+    /* transform: translate(-50%, -50%); */
 
     & .square {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: relative;
+      /* position: absolute; */
       max-width: 13rem;
       min-height: 10rem;
       width: 100%;
@@ -229,7 +167,7 @@ const AboutWrapper = styled.section`
   & .bio {
     display: flex;
     justify-content: center;
-    margin: 3rem 0;
+    margin-top: 3rem;
 
     p {
       margin: 0 2rem;
