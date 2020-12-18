@@ -106,7 +106,7 @@ const AboutWrapper = styled.section`
   }
 
   & .squares {
-    margin: 3rem 0;
+    margin: 2rem 0;
     width: 100%;
     max-width: 1200px;
     display: flex;
