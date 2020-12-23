@@ -1,6 +1,9 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import About from "../components/about"
 import Projects from "../components/projects"
 import Contact from "../components/contact"
@@ -38,6 +41,24 @@ const IndexPage = () => (
     <About />
     <Projects />
     <Contact />
+    <Footer>
+      <div className="arrow">
+        <FontAwesomeIcon icon={faAngleDoubleUp} size="2x" className="angle" />
+      </div>
+      <div className="icons">
+        {/* <div className="icon"> */}
+        <a href="https://github.com/Sgreid7" target="_blank">
+          <FontAwesomeIcon icon={faGithub} size="2x" className="icon" />
+        </a>
+        {/* </div> */}
+        {/* <div className="icon"> */}
+        <a href="https://www.linkedin.com/in/samgreider/" target="_blank">
+          <FontAwesomeIcon icon={faLinkedinIn} size="2x" className="icon" />
+        </a>
+        {/* </div> */}
+      </div>
+      <p>Sam Greider &#169; 2020</p>
+    </Footer>
   </Layout>
 )
 
@@ -60,7 +81,6 @@ const HomeWrapper = styled.section`
   overflow: hidden;
   position: relative;
   font-family: "Mulish", sans-serif;
-  clip-path: path("M 0 0 L 50 100 L 100 0 Z");
 
   & nav {
     display: flex;
@@ -143,12 +163,8 @@ const HomeWrapper = styled.section`
       width: 10rem;
       height: 2.75rem;
       font-size: 0.875rem;
-      /* font-weight: bold; */
       letter-spacing: 0.075rem;
       transition: 0.4s ease;
-      /* -webkit-box-shadow: 0 10px 6px -6px #000;
-      -moz-box-shadow: 0 10px 6px -6px #000;
-      box-shadow: 0 10px 6px -6px #000; */
 
       & .arrow {
         transition: 0.4s ease;
@@ -159,7 +175,6 @@ const HomeWrapper = styled.section`
         background: #000;
         border: 0.15rem solid #000;
         box-shadow: 0 8px 4px -4px #fff;
-        /* font-weight: bold; */
 
         & .arrow {
           transform: rotate(90deg);
@@ -168,61 +183,44 @@ const HomeWrapper = styled.section`
       }
     }
   }
+`
+const Footer = styled.footer`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1b242f;
+  color: #8f9aa7;
+  height: 10rem;
+  position: relative;
+  font-family: "Mulish", sans-serif;
 
-  .icons {
-    padding: 0;
+  & .arrow {
+    background: #e31b6d;
+    color: #fff;
+    width: 2.25rem;
+    height: 2.25rem;
     position: absolute;
+    top: -1rem;
+    cursor: pointer;
     display: flex;
-    top: 31rem;
+    justify-content: center;
+    align-items: center;
 
-    a {
-      position: relative;
-      margin: 0 1rem;
-      padding: 0.5rem;
-      transition: 0.5s ease;
-      background: transparent;
-      color: #fff;
-      border: 0.1rem solid #fff;
-      border-radius: 50%;
-      text-align: center;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        background: #0e34a0;
-        transition: 0.5s ease;
-        transform: scale(0.9);
-        z-index: -1;
-      }
-
-      &:hover::before {
-        transform: scale(1.1);
-        box-shadow: 0 0 2rem #0e34a0;
-      }
-
-      &:hover {
-        color: #0e34a0;
-        background: #fff;
-        border: 0.1rem solid #0e34a0;
-        box-shadow: 0 0 1rem #0e34a0;
-        text-shadow: 1rem 1rem 1rem #0e34a0;
-      }
+    & .angle {
+      margin-top: -0.05rem;
     }
   }
 
-  /* &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -5;
-    background: rgba(52, 52, 52, 0.9);
-  } */
+  & .icons {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 1rem 0;
+
+    & a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+  }
 `

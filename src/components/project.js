@@ -31,6 +31,7 @@ const Card = styled.section`
   align-items: center;
   justify-content: center;
   max-width: 25rem;
+  height: 15rem;
   max-height: 20rem;
   margin: 2rem 0;
 
@@ -72,11 +73,13 @@ const Card = styled.section`
 
     & h4,
     p {
+      font-family: "Mulish", sans-serif;
       margin: 0;
     }
 
     & .desc {
       color: #e31b6d;
+      font-family: "Mulish", sans-serif;
     }
   }
 

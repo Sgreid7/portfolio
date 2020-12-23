@@ -19,59 +19,45 @@ const Projects = () => {
       <div className="underline"></div>
 
       <div className="projects">
-        <div className="space">
-          <Project
-            site="https://satellite-spacebook.netlify.app/"
-            code="https://github.com/Sgreid7/SpaceBook"
-            image={Spacebook}
-            alt="Spacebook"
-            desc="React, Gatsby, C#"
-          />
-        </div>
+        <Project
+          site="https://satellite-spacebook.netlify.app/"
+          code="https://github.com/Sgreid7/SpaceBook"
+          image={Spacebook}
+          alt="Spacebook"
+          desc="React, Gatsby, C#"
+        />
 
-        <div className="middle">
-          <div className="color">
-            <Project
-              site="https://hooks-colorpicker-sam.netlify.app/"
-              code="https://github.com/Sgreid7/hooks-colorpicker"
-              image={ColorPicker}
-              alt="Color Picker"
-              desc="React"
-            />
-          </div>
+        <Project
+          site="https://hooks-colorpicker-sam.netlify.app/"
+          code="https://github.com/Sgreid7/hooks-colorpicker"
+          image={ColorPicker}
+          alt="Color Picker"
+          desc="React"
+        />
 
-          <div className="hangman">
-            <Project
-              site="https://snowman-sam.netlify.app/"
-              code="https://github.com/Sgreid7/snowman"
-              image={Hangman}
-              alt="Snowman Hangman"
-              desc="React"
-            />
-          </div>
-        </div>
+        <Project
+          site="https://snowman-sam.netlify.app/"
+          code="https://github.com/Sgreid7/snowman"
+          image={Hangman}
+          alt="Snowman Hangman"
+          desc="React"
+        />
 
-        <div className="last">
-          <div className="spooky">
-            <Project
-              site="https://spookyportfolio-sam.netlify.app/"
-              code="https://github.com/Sgreid7/spookyportfolio"
-              image={Spooky}
-              alt="Spooky Portfolio"
-              desc="HTML/CSS"
-            />
-          </div>
+        <Project
+          site="https://spookyportfolio-sam.netlify.app/"
+          code="https://github.com/Sgreid7/spookyportfolio"
+          image={Spooky}
+          alt="Spooky Portfolio"
+          desc="HTML/CSS"
+        />
 
-          <div className="movies">
-            <Project
-              site="https://1989-movies-sam.netlify.app/"
-              code="https://github.com/Sgreid7/1989-movies"
-              image={Movies}
-              alt="1989 Movies"
-              desc="React"
-            />
-          </div>
-        </div>
+        <Project
+          site="https://1989-movies-sam.netlify.app/"
+          code="https://github.com/Sgreid7/1989-movies"
+          image={Movies}
+          alt="1989 Movies"
+          desc="React"
+        />
       </div>
     </ProjectsWrapper>
   )
@@ -110,10 +96,11 @@ const ProjectsWrapper = styled.section`
   }
 
   .projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: repeat(3, 1fr); */
 
-    & .space {
+    /* & .space {
       grid-column-start: 1;
       grid-column-end: 4;
     }
@@ -126,6 +113,6 @@ const ProjectsWrapper = styled.section`
     & .last {
       grid-column-start: 1;
       grid-column-end: 4;
-    }
+    } */
   }
 `

@@ -89,7 +89,7 @@ const ContactWrapper = styled.section`
     display: flex;
     flex-direction: column;
     min-width: 500px;
-    margin: 1rem auto 0 auto;
+    margin: 1rem auto 1rem auto;
 
     & input,
     textarea {

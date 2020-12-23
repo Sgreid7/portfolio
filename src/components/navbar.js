@@ -27,7 +27,7 @@ const Navbar = () => {
             spy={true}
             smooth={true}
             hashSpy={true}
-            offset={50}
+            offset={-50}
             duration={500}
             delay={0}
             isDynamic={true}
@@ -42,7 +42,7 @@ const Navbar = () => {
             spy={true}
             smooth={true}
             hashSpy={true}
-            offset={50}
+            offset={-50}
             duration={500}
             delay={0}
             isDynamic={true}
@@ -57,7 +57,7 @@ const Navbar = () => {
             spy={true}
             smooth={true}
             hashSpy={true}
-            offset={50}
+            offset={-50}
             duration={500}
             delay={0}
             isDynamic={true}
@@ -81,7 +81,8 @@ const Nav = styled.nav`
   top: 0;
   width: 100%;
   /* background: #020103; */
-  background: #252934;
+  /* background: #252934; */
+  background: #1b242f;
   font-family: "Mulish", sans-serif;
   /* border-bottom: 0.125rem solid #0018a8; */
   border-bottom: 0.125rem solid #e31b6d;
