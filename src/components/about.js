@@ -17,7 +17,7 @@ const About = () => {
     config: { mass: 5, tension: 500, friction: 80 },
   })
   return (
-    <AboutWrapper>
+    <AboutWrapper id="about">
       <div className="title">
         <h2>About</h2>
       </div>

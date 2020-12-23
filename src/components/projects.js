@@ -10,15 +10,8 @@ import Movies from "../images/movies.png"
 // import { useSpring, animated } from "react-spring"
 
 const Projects = () => {
-  // const [flipped, set] = useState(false)
-  // const { transform, opacity } = useSpring({
-  //   opacity: flipped ? 1 : 0,
-  //   transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
-  //   config: { mass: 5, tension: 500, friction: 80 }
-  // })
-
   return (
-    <ProjectsWrapper>
+    <ProjectsWrapper id="projects">
       <div className="title">
         <h2>Projects</h2>
       </div>

@@ -6,21 +6,65 @@
  */
 
 import React from "react"
+import {
+  Link,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll"
 import styled from "styled-components"
 
 const Navbar = () => {
   return (
     <Nav>
       <ul>
-        <a href="/">
-          <li>About</li>
-        </a>
-        <a href="/">
-          <li>Projects</li>
-        </a>
-        <a href="/">
-          <li>Contact</li>
-        </a>
+        <li>
+          <Link
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            offset={50}
+            duration={500}
+            delay={0}
+            isDynamic={true}
+          >
+            About
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass="active"
+            to="projects"
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            offset={50}
+            duration={500}
+            delay={0}
+            isDynamic={true}
+          >
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            offset={50}
+            duration={500}
+            delay={0}
+            isDynamic={true}
+          >
+            Contact
+          </Link>
+        </li>
       </ul>
     </Nav>
   )

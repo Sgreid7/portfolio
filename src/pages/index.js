@@ -1,18 +1,24 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import About from "../components/about"
 import Projects from "../components/projects"
 import Contact from "../components/contact"
 import styled, { keyframes } from "styled-components"
+import {
+  Link,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll"
 
-import devices from "../utils/devices"
 import Navbar from "../components/navbar"
 import Stars from "../components/stars"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
+import devices from "../utils/devices"
 
 const IndexPage = () => (
   <Layout>
@@ -55,6 +61,45 @@ const HomeWrapper = styled.section`
   position: relative;
   font-family: "Mulish", sans-serif;
   clip-path: path("M 0 0 L 50 100 L 100 0 Z");
+
+  & nav {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 5;
+    padding: 1rem 0;
+    top: 0;
+    width: 100%;
+    /* background: #020103; */
+    background: #252934;
+    font-family: "Mulish", sans-serif;
+    /* border-bottom: 0.125rem solid #0018a8; */
+    border-bottom: 0.125rem solid #e31b6d;
+
+    & ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      /* background: #020103; */
+      background: #252934;
+      margin: 0;
+
+      & a {
+        text-decoration: none;
+        color: #fff;
+        margin: 0 1rem;
+        cursor: pointer;
+      }
+
+      & li {
+        cursor: pointer;
+        margin: 0;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        text-shadow: 0.1rem 0.1rem 0.1rem #000;
+      }
+    }
+  }
 
   & header {
     display: flex;
@@ -113,7 +158,7 @@ const HomeWrapper = styled.section`
       &:hover {
         background: #000;
         border: 0.15rem solid #000;
-        box-shadow: 0 10px 6px -6px #fff;
+        box-shadow: 0 8px 4px -4px #fff;
         /* font-weight: bold; */
 
         & .arrow {
