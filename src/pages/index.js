@@ -29,7 +29,7 @@ const IndexPage = () => (
     <HomeWrapper>
       <Navbar />
       <Stars />
-      <header>
+      <header id="home">
         <h1>Hi, I'm Sam Greider.</h1>
         <h2>I'm a front-end developer.</h2>
         <button>
@@ -43,7 +43,19 @@ const IndexPage = () => (
     <Contact />
     <Footer>
       <div className="arrow">
-        <FontAwesomeIcon icon={faAngleDoubleUp} size="2x" className="angle" />
+        <Link
+          activeClass="active"
+          to="home"
+          spy={true}
+          smooth={true}
+          hashSpy={true}
+          offset={-75}
+          duration={500}
+          delay={0}
+          isDynamic={true}
+        >
+          <FontAwesomeIcon icon={faAngleDoubleUp} size="2x" className="angle" />
+        </Link>
       </div>
       <div className="icons">
         {/* <div className="icon"> */}
@@ -57,7 +69,9 @@ const IndexPage = () => (
         </a>
         {/* </div> */}
       </div>
-      <p>Sam Greider &#169; 2020</p>
+      <p>
+        Sam Greider <span>&#169; 2020</span>
+      </p>
     </Footer>
   </Layout>
 )
@@ -222,5 +236,10 @@ const Footer = styled.footer`
       text-decoration: none;
       margin: 0 1rem;
     }
+  }
+
+  & span {
+    color: #e31b6d;
+    font-size: 0.75rem;
   }
 `
