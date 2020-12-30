@@ -22,7 +22,8 @@ const Navbar = () => {
       <ul>
         <li>
           <Link
-            activeClass="active"
+            // activeClass="active"
+            activeStyle={{ color: "red" }}
             to="about"
             spy={true}
             smooth={true}
@@ -37,7 +38,8 @@ const Navbar = () => {
         </li>
         <li>
           <Link
-            activeClass="active"
+            // activeClass="active"
+            activeStyle={{ color: "red" }}
             to="projects"
             spy={true}
             smooth={true}
@@ -52,7 +54,8 @@ const Navbar = () => {
         </li>
         <li>
           <Link
-            activeClass="active"
+            // activeClass="active"
+            activeStyle={{ color: "red" }}
             to="contact"
             spy={true}
             smooth={true}
@@ -80,19 +83,16 @@ const Nav = styled.nav`
   padding: 1rem 0;
   top: 0;
   width: 100%;
-  /* background: #020103; */
-  /* background: #252934; */
   background: #1b242f;
   font-family: "Mulish", sans-serif;
-  /* border-bottom: 0.125rem solid #0018a8; */
-  border-bottom: 0.125rem solid #e31b6d;
+  /* border-bottom: 0.17rem solid #e31b6d; */
+  border-bottom: 0.17rem solid #05c2c9;
 
   & ul {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    /* background: #020103; */
-    background: #252934;
+    background: #1b242f;
     margin: 0;
 
     & a {
@@ -107,7 +107,7 @@ const Nav = styled.nav`
       margin: 0;
       font-size: 0.9rem;
       text-transform: uppercase;
-      text-shadow: 0.1rem 0.1rem 0.1rem #000;
+      text-shadow: 0.03rem 0.03rem 0.03rem #000;
     }
   }
 `

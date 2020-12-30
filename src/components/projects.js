@@ -7,57 +7,70 @@ import ColorPicker from "../images/colorpicker.png"
 import Hangman from "../images/hangman.png"
 import Spooky from "../images/spooky.png"
 import Movies from "../images/movies.png"
+import Fade from "react-reveal/Fade"
 // import { useSpring, animated } from "react-spring"
 
 const Projects = () => {
   return (
     <ProjectsWrapper id="projects">
-      <div className="title">
-        <h2>Projects</h2>
-      </div>
+      <Fade left>
+        <div className="title">
+          <h2>Projects</h2>
+        </div>
 
-      <div className="underline"></div>
+        <div className="underline"></div>
+      </Fade>
 
       <div className="projects">
-        <Project
-          site="https://satellite-spacebook.netlify.app/"
-          code="https://github.com/Sgreid7/SpaceBook"
-          image={Spacebook}
-          alt="Spacebook"
-          desc="React, Gatsby, C#"
-        />
+        <Fade top>
+          <Project
+            site="https://satellite-spacebook.netlify.app/"
+            code="https://github.com/Sgreid7/SpaceBook"
+            image={Spacebook}
+            alt="Spacebook"
+            desc="React, Gatsby, C#"
+          />
+        </Fade>
 
-        <Project
-          site="https://hooks-colorpicker-sam.netlify.app/"
-          code="https://github.com/Sgreid7/hooks-colorpicker"
-          image={ColorPicker}
-          alt="Color Picker"
-          desc="React"
-        />
+        <Fade left>
+          <Project
+            site="https://hooks-colorpicker-sam.netlify.app/"
+            code="https://github.com/Sgreid7/hooks-colorpicker"
+            image={ColorPicker}
+            alt="Color Picker"
+            desc="React"
+          />
+        </Fade>
 
-        <Project
-          site="https://snowman-sam.netlify.app/"
-          code="https://github.com/Sgreid7/snowman"
-          image={Hangman}
-          alt="Snowman Hangman"
-          desc="React"
-        />
+        <Fade right>
+          <Project
+            site="https://snowman-sam.netlify.app/"
+            code="https://github.com/Sgreid7/snowman"
+            image={Hangman}
+            alt="Snowman Hangman"
+            desc="React"
+          />
+        </Fade>
 
-        <Project
-          site="https://spookyportfolio-sam.netlify.app/"
-          code="https://github.com/Sgreid7/spookyportfolio"
-          image={Spooky}
-          alt="Spooky Portfolio"
-          desc="HTML/CSS"
-        />
+        <Fade left>
+          <Project
+            site="https://spookyportfolio-sam.netlify.app/"
+            code="https://github.com/Sgreid7/spookyportfolio"
+            image={Spooky}
+            alt="Spooky Portfolio"
+            desc="HTML/CSS"
+          />
+        </Fade>
 
-        <Project
-          site="https://1989-movies-sam.netlify.app/"
-          code="https://github.com/Sgreid7/1989-movies"
-          image={Movies}
-          alt="1989 Movies"
-          desc="React"
-        />
+        <Fade bottom>
+          <Project
+            site="https://1989-movies-sam.netlify.app/"
+            code="https://github.com/Sgreid7/1989-movies"
+            image={Movies}
+            alt="1989 Movies"
+            desc="React"
+          />
+        </Fade>
       </div>
     </ProjectsWrapper>
   )

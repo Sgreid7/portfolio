@@ -1,48 +1,54 @@
 import React from "react"
 import styled from "styled-components"
-import SEO from "../components/seo"
-import HamburgerMenu from "../components/hamburgerMenu"
-import Layout from "../components/layout"
-
+import Fade from "react-reveal/Fade"
+import LightSpeed from "react-reveal/LightSpeed"
 import devices from "../utils/devices"
 
 const contact = () => {
   return (
     <ContactWrapper id="contact">
-      <div className="title">
-        <h2>Contact</h2>
-      </div>
-      <div className="underline"></div>
-      <p>Have a question or want to work together?</p>
-      <form
-        name="contact"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
-        <input
-          type="text"
-          placeholder="Name"
-          name="name"
-          required
-          autoComplete="off"
-        />
-        <input
-          type="email"
-          placeholder="Enter email"
-          name="email"
-          required
-          autoComplete="off"
-        />
-        <textarea
-          name="message"
-          id="message"
-          placeholder="Your message"
-        ></textarea>
-        <div className="submit">
-          <button type="submit">Submit</button>
+      <Fade right>
+        <div className="title">
+          <h2>Contact</h2>
         </div>
-      </form>
+        <div className="underline"></div>
+      </Fade>
+
+      <Fade left>
+        <p>Have a question or want to work together?</p>
+      </Fade>
+
+      <Fade bottom>
+        <form
+          name="contact"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <input
+            type="text"
+            placeholder="Name"
+            name="name"
+            required
+            autoComplete="off"
+          />
+          <input
+            type="email"
+            placeholder="Enter email"
+            name="email"
+            required
+            autoComplete="off"
+          />
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Your message"
+          ></textarea>
+          <div className="submit">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </Fade>
     </ContactWrapper>
   )
 }

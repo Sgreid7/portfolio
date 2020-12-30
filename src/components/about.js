@@ -7,6 +7,7 @@ import { UilExpandArrowsAlt } from "@iconscout/react-unicons"
 import { UilLightbulbAlt } from "@iconscout/react-unicons"
 import { UilRocket } from "@iconscout/react-unicons"
 import styled from "styled-components"
+import Fade from "react-reveal/Fade"
 import { useSpring, animated } from "react-spring"
 
 const About = () => {
@@ -18,55 +19,65 @@ const About = () => {
   })
   return (
     <AboutWrapper id="about">
-      <div className="title">
-        <h2>About</h2>
-      </div>
+      <Fade left>
+        <div className="title">
+          <h2>About</h2>
+        </div>
 
-      <div className="underline"></div>
+        <div className="underline"></div>
+      </Fade>
 
       <div className="container">
-        <div className="squares">
-          <div className="square middle" onClick={() => set(state => !state)}>
-            <UilTachometerFastAlt size="50" color="#05C2C9" className="icon" />
-            <p className="title">Speed</p>
-            <p className="text">Fast load speeds are my priority.</p>
+        <Fade left>
+          <div className="squares">
+            <div className="square middle" onClick={() => set(state => !state)}>
+              <UilTachometerFastAlt
+                size="50"
+                color="#05C2C9"
+                className="icon"
+              />
+              <p className="title">Speed</p>
+              <p className="text">Fast load speeds are my priority.</p>
+            </div>
+            <div className="square middle" onClick={() => set(state => !state)}>
+              <UilExpandArrowsAlt size="50" color="#05C2C9" className="icon" />
+              <p className="title">Responsive</p>
+              <p className="text">My projects scale on all device sizes.</p>
+            </div>
+            <div className="square middle" onClick={() => set(state => !state)}>
+              <UilLightbulbAlt size="50" color="#05C2C9" className="icon" />
+              <p className="title">Intuitive</p>
+              <p className="text">Designed for user-friendly UI/UX.</p>
+            </div>
+            <div className="square middle" onClick={() => set(state => !state)}>
+              <UilRocket size="50" color="#05C2C9" className="icon" />
+              <p className="title">Dynamic</p>
+              <p className="text">
+                I strive to create websites that come to life.
+              </p>
+            </div>
           </div>
-          <div className="square middle" onClick={() => set(state => !state)}>
-            <UilExpandArrowsAlt size="50" color="#05C2C9" className="icon" />
-            <p className="title">Responsive</p>
-            <p className="text">My projects scale on all device sizes.</p>
-          </div>
-          <div className="square middle" onClick={() => set(state => !state)}>
-            <UilLightbulbAlt size="50" color="#05C2C9" className="icon" />
-            <p className="title">Intuitive</p>
-            <p className="text">Designed for user-friendly UI/UX.</p>
-          </div>
-          <div className="square middle" onClick={() => set(state => !state)}>
-            <UilRocket size="50" color="#05C2C9" className="icon" />
-            <p className="title">Dynamic</p>
-            <p className="text">
-              I strive to create websites that come to life.
+        </Fade>
+
+        <Fade right>
+          <div className="bio">
+            <img src={Headshot} alt="My headshot" />
+            <p>
+              In 2020, I graduated from Suncoast Developer's Guild, a 3-month
+              intensive code school, where I learned full-stack web development.
+              I delivered my thesis project on-time using React for the
+              front-end and C# .NET for the back-end to create a satellite
+              tracker app. I was the only person in my cohort who chose to use a
+              framework outside of what was being taught (Gatsby JS), which I
+              self-taught alongside the rest of the curriculum. I'm a naturally
+              curious person and I’ve found that software development is a way
+              for me to continuously challenge myself while also solving
+              real-world problems. I believe that preparation is the key to
+              creating user-friendly web applications, and I bring that attitude
+              to every project I take on.
             </p>
           </div>
-        </div>
-
-        <div className="bio">
-          <img src={Headshot} alt="My headshot" />
-          <p>
-            In 2020, I graduated from Suncoast Developer's Guild, a 3-month
-            intensive code school, where I learned full-stack web development. I
-            delivered my thesis project on-time using React for the front-end
-            and C# .NET for the back-end to create a satellite tracker app. I
-            was the only person in my cohort who chose to use a framework
-            outside of what was being taught (Gatsby JS), which I self-taught
-            alongside the rest of the curriculum. I'm a naturally curious person
-            and I’ve found that software development is a way for me to
-            continuously challenge myself while also solving real-world
-            problems. I believe that preparation is the key to creating
-            user-friendly web applications, and I bring that attitude to every
-            project I take on.
-          </p>
-        </div>
+        </Fade>
       </div>
     </AboutWrapper>
   )

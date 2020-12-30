@@ -32,10 +32,22 @@ const IndexPage = () => (
       <header id="home">
         <h1>Hi, I'm Sam Greider.</h1>
         <h2>I'm a front-end developer.</h2>
-        <button>
-          View my work
-          <FontAwesomeIcon icon={faArrowRight} size="sm" className="arrow" />
-        </button>
+        <Link
+          activeClass="active"
+          to="projects"
+          spy={true}
+          smooth={true}
+          hashSpy={true}
+          offset={0}
+          duration={500}
+          delay={0}
+          isDynamic={true}
+        >
+          <button>
+            View my work
+            <FontAwesomeIcon icon={faArrowRight} size="sm" className="arrow" />
+          </button>
+        </Link>
       </header>
     </HomeWrapper>
     <About />
@@ -96,45 +108,6 @@ const HomeWrapper = styled.section`
   position: relative;
   font-family: "Mulish", sans-serif;
 
-  & nav {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    z-index: 5;
-    padding: 1rem 0;
-    top: 0;
-    width: 100%;
-    /* background: #020103; */
-    background: #252934;
-    font-family: "Mulish", sans-serif;
-    /* border-bottom: 0.125rem solid #0018a8; */
-    border-bottom: 0.125rem solid #e31b6d;
-
-    & ul {
-      display: flex;
-      justify-content: center;
-      list-style-type: none;
-      /* background: #020103; */
-      background: #252934;
-      margin: 0;
-
-      & a {
-        text-decoration: none;
-        color: #fff;
-        margin: 0 1rem;
-        cursor: pointer;
-      }
-
-      & li {
-        cursor: pointer;
-        margin: 0;
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        text-shadow: 0.1rem 0.1rem 0.1rem #000;
-      }
-    }
-  }
-
   & header {
     display: flex;
     flex-direction: column;
@@ -146,7 +119,8 @@ const HomeWrapper = styled.section`
     h1 {
       font-size: 3.5rem;
       margin-bottom: 1rem;
-      text-shadow: 0.125rem 0.125rem 0.125rem #000;
+      /* text-shadow: 0.125rem 0.125rem 0.125rem #000; */
+      text-shadow: 0.05rem 0.05rem 0.05rem #000;
       /* #380a70 */
     }
 
@@ -162,7 +136,8 @@ const HomeWrapper = styled.section`
       line-height: 1.2;
       margin-bottom: 1.25rem;
       padding: 0.2rem 1rem;
-      text-shadow: 0.085rem 0.085rem 0.085rem #000;
+      /* text-shadow: 0.085rem 0.085rem 0.085rem #000; */
+      text-shadow: 0.025rem 0.025rem 0.025rem #000;
     }
 
     button {
@@ -188,7 +163,8 @@ const HomeWrapper = styled.section`
       &:hover {
         background: #000;
         border: 0.15rem solid #000;
-        box-shadow: 0 8px 4px -4px #fff;
+        /* box-shadow: 0 8px 4px -4px #fff; */
+        box-shadow: 0 8px 4px -4px #05c2c9;
 
         & .arrow {
           transform: rotate(90deg);
