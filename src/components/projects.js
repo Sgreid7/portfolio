@@ -8,7 +8,6 @@ import Hangman from "../images/hangman.png"
 import Spooky from "../images/spooky.png"
 import Movies from "../images/movies.png"
 import Fade from "react-reveal/Fade"
-// import { useSpring, animated } from "react-spring"
 
 const Projects = () => {
   return (
@@ -111,21 +110,5 @@ const ProjectsWrapper = styled.section`
   .projects {
     display: flex;
     flex-direction: column;
-    /* grid-template-columns: repeat(3, 1fr); */
-
-    /* & .space {
-      grid-column-start: 1;
-      grid-column-end: 4;
-    }
-
-    & .middle {
-      grid-column-start: 1;
-      grid-column-end: 4;
-    }
-
-    & .last {
-      grid-column-start: 1;
-      grid-column-end: 4;
-    } */
   }
 `

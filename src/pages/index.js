@@ -70,16 +70,13 @@ const IndexPage = () => (
         </Link>
       </div>
       <div className="icons">
-        {/* <div className="icon"> */}
         <a href="https://github.com/Sgreid7" target="_blank">
           <FontAwesomeIcon icon={faGithub} size="2x" className="icon" />
         </a>
-        {/* </div> */}
-        {/* <div className="icon"> */}
+
         <a href="https://www.linkedin.com/in/samgreider/" target="_blank">
           <FontAwesomeIcon icon={faLinkedinIn} size="2x" className="icon" />
         </a>
-        {/* </div> */}
       </div>
       <p>
         Sam Greider <span>&#169; 2020</span>
@@ -89,10 +86,6 @@ const IndexPage = () => (
 )
 
 export default IndexPage
-
-const rotate = keyframes`
-  transform: rotate()
-`
 
 const HomeWrapper = styled.section`
   display: flex;
@@ -119,9 +112,7 @@ const HomeWrapper = styled.section`
     h1 {
       font-size: 3.5rem;
       margin-bottom: 1rem;
-      /* text-shadow: 0.125rem 0.125rem 0.125rem #000; */
       text-shadow: 0.05rem 0.05rem 0.05rem #000;
-      /* #380a70 */
     }
 
     h1,
@@ -136,7 +127,6 @@ const HomeWrapper = styled.section`
       line-height: 1.2;
       margin-bottom: 1.25rem;
       padding: 0.2rem 1rem;
-      /* text-shadow: 0.085rem 0.085rem 0.085rem #000; */
       text-shadow: 0.025rem 0.025rem 0.025rem #000;
     }
 
@@ -163,12 +153,37 @@ const HomeWrapper = styled.section`
       &:hover {
         background: #000;
         border: 0.15rem solid #000;
-        /* box-shadow: 0 8px 4px -4px #fff; */
         box-shadow: 0 8px 4px -4px #05c2c9;
 
         & .arrow {
           transform: rotate(90deg);
           transition: 0.4s ease;
+        }
+      }
+    }
+  }
+
+  @media (${devices.laptop}) {
+    & header {
+      h1 {
+        font-size: 3rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      button {
+        width: 8.5rem;
+        height: 2.5rem;
+        font-size: 0.75rem;
+
+        & .arrow {
+          margin-top: 0.125rem;
+        }
+
+        &:hover {
+          box-shadow: 0 6px 2px -2px #05c2c9;
         }
       }
     }

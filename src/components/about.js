@@ -122,7 +122,6 @@ const AboutWrapper = styled.section`
     max-width: 1200px;
     display: flex;
     justify-content: space-evenly;
-    /* transform: translate(-50%, -50%); */
 
     & .square {
       display: flex;
@@ -157,20 +156,11 @@ const AboutWrapper = styled.section`
 
       & .text {
         text-align: center;
-        /* opacity: 0; */
-        /* max-height: 0; */
-        /* transition: all 0.3s ease; */
       }
 
       &:hover {
         box-shadow: 0px 15px 40px -10px rgba(0, 0, 0, 0.4);
         cursor: pointer;
-
-        /* & .text {
-          transition: all 0.3s ease;
-          opacity: 1;
-          max-height: 40px;
-        } */
       }
     }
   }

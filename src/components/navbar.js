@@ -106,6 +106,7 @@ const Nav = styled.nav`
       cursor: pointer;
       margin: 0;
       font-size: 0.9rem;
+      letter-spacing: 0.015rem;
       text-transform: uppercase;
       text-shadow: 0.03rem 0.03rem 0.03rem #000;
     }
