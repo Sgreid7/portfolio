@@ -128,7 +128,6 @@ const AboutWrapper = styled.section`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      /* position: absolute; */
       max-width: 13rem;
       min-height: 10rem;
       width: 100%;
@@ -184,6 +183,117 @@ const AboutWrapper = styled.section`
       box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.3);
       transition: box-shadow 0.5s;
       will-change: transform;
+    }
+  }
+
+  @media (${devices.laptop}) {
+    .title {
+      h2 {
+        font-size: 2.25rem;
+      }
+    }
+
+    & .underline {
+      margin: 0.75rem 0;
+      width: 3.75rem;
+    }
+
+    & .squares {
+      margin: 1rem 0;
+      width: 100%;
+      max-width: 1024px;
+      display: grid;
+      grid-template-columns: repeat(2, 35%);
+      grid-row-gap: 2rem;
+      justify-items: center;
+
+      & .square {
+        max-width: 15rem;
+        min-height: 10rem;
+
+        & .title {
+          font-size: 1rem;
+        }
+
+        & .text {
+          font-size: 0.85rem;
+        }
+      }
+    }
+
+    & .bio {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+
+      p {
+        margin: 0 2rem;
+        font-size: 1rem;
+        width: 50%;
+        text-align: center;
+      }
+
+      & img {
+        max-width: 20%;
+        height: 15rem;
+        border-radius: 50%;
+        margin: 0 2rem;
+      }
+    }
+  }
+
+  @media (${devices.tablet}) {
+    .title {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    & .underline {
+      width: 3.5rem;
+    }
+
+    & .squares {
+      margin: 1rem 0;
+      width: 100%;
+      max-width: 1024px;
+      display: grid;
+      grid-template-columns: repeat(2, 35%);
+      grid-row-gap: 2rem;
+      justify-items: center;
+
+      & .square {
+        max-width: 13rem;
+        min-height: 10rem;
+
+        & .title {
+          font-size: 1rem;
+        }
+
+        & .text {
+          font-size: 0.85rem;
+        }
+      }
+    }
+
+    & .bio {
+      flex-direction: column;
+      margin-top: 2rem;
+
+      p {
+        margin: 0 2rem;
+        font-size: 1rem;
+        width: 75%;
+        text-align: center;
+      }
+
+      & img {
+        max-width: 20%;
+        height: 10rem;
+        border-radius: 50%;
+        margin: 0 0 1rem 0;
+      }
     }
   }
 `

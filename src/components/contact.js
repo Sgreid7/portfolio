@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import Fade from "react-reveal/Fade"
-import LightSpeed from "react-reveal/LightSpeed"
 import devices from "../utils/devices"
 
 const contact = () => {
@@ -130,6 +129,55 @@ const ContactWrapper = styled.section`
         &:hover {
           background: #04c2c9;
           border-color: #04c2c9;
+        }
+      }
+    }
+  }
+
+  @media (${devices.laptop}) {
+    .title {
+      h2 {
+        font-size: 2.25rem;
+      }
+    }
+
+    & .underline {
+      margin: 0.75rem 0;
+      width: 3.75rem;
+    }
+
+    & p {
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+
+    & form {
+      min-width: 450px;
+    }
+  }
+
+  @media (${devices.tablet}) {
+    .title {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    & .underline {
+      width: 3.5rem;
+    }
+
+    & p {
+      margin: 1rem 0;
+      font-size: 0.85rem;
+    }
+
+    & form {
+      min-width: 400px;
+
+      & .submit {
+        & button {
+          font-size: 0.85rem;
         }
       }
     }

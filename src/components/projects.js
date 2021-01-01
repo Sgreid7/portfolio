@@ -111,4 +111,29 @@ const ProjectsWrapper = styled.section`
     display: flex;
     flex-direction: column;
   }
+
+  @media (${devices.laptop}) {
+    .title {
+      h2 {
+        font-size: 2.25rem;
+      }
+    }
+
+    & .underline {
+      margin: 0.75rem 0;
+      width: 3.75rem;
+    }
+  }
+
+  @media (${devices.tablet}) {
+    .title {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    & .underline {
+      width: 3.5rem;
+    }
+  }
 `

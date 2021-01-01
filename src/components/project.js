@@ -125,4 +125,52 @@ const Card = styled.section`
       transform: translateY(-0.5rem);
     }
   }
+
+  @media (${devices.laptop}) {
+    max-width: 20rem;
+    height: 13rem;
+    max-height: 20rem;
+    margin: 1.5rem 0;
+
+    & .text {
+      & h4 {
+        font-size: 1.15rem;
+      }
+
+      & .desc {
+        font-size: 0.85rem;
+      }
+    }
+
+    button {
+      width: 7rem;
+      padding: 0.25rem;
+      margin: 1rem 0.5rem 0 1rem;
+      font-size: 0.85rem;
+    }
+  }
+
+  @media (${devices.tablet}) {
+    max-width: 20rem;
+    height: 13rem;
+    max-height: 20rem;
+    margin: 1.5rem 0;
+
+    & .text {
+      & h4 {
+        font-size: 1.15rem;
+      }
+
+      & .desc {
+        font-size: 0.85rem;
+      }
+    }
+
+    button {
+      width: 7rem;
+      padding: 0.25rem;
+      margin: 1rem 0.5rem 0 1rem;
+      font-size: 0.85rem;
+    }
+  }
 `

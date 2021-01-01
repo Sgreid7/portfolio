@@ -15,6 +15,7 @@ import {
   scroller,
 } from "react-scroll"
 import styled from "styled-components"
+import devices from "../utils/devices"
 
 const Navbar = () => {
   return (
@@ -85,7 +86,6 @@ const Nav = styled.nav`
   width: 100%;
   background: #1b242f;
   font-family: "Mulish", sans-serif;
-  /* border-bottom: 0.17rem solid #e31b6d; */
   border-bottom: 0.17rem solid #05c2c9;
 
   & ul {
@@ -109,6 +109,15 @@ const Nav = styled.nav`
       letter-spacing: 0.015rem;
       text-transform: uppercase;
       text-shadow: 0.03rem 0.03rem 0.03rem #000;
+    }
+  }
+
+  @media (${devices.laptop}) {
+    & ul {
+      & li {
+        font-size: 0.8rem;
+        text-shadow: 0.02rem 0.02rem 0.02rem #000;
+      }
     }
   }
 `
